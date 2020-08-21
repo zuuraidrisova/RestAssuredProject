@@ -12,6 +12,7 @@ public class BeforeAfterJunit5 {
         System.out.println("This runs before all!");
     }
 
+
     @BeforeEach
     public void beforeEachTest(){
 

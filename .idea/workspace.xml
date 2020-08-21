@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ebefd970-32ab-434f-a153-3c45f1a025d2" name="Default Changelist" comment="" />
+    <list default="true" id="ebefd970-32ab-434f-a153-3c45f1a025d2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/day01_Junit5Practice/BeforeAfterJunit5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/day01_Junit5Practice/BeforeAfterJunit5.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +21,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -25,89 +32,91 @@
     </option>
   </component>
   <component name="ProjectId" id="1gH9ekIX3ArSEW1WsJp4XsMMBXk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.RestAssuredMethodChaining.testing">
-    <configuration name="HamcrestPractice.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.movieAPI.testQueryParam">
+    <configuration name="SpartanPathParameters.testingWithQueryParam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day01_Junit5Practice.*" />
+          <option name="PATTERN" value="day2_.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="day01_Junit5Practice" />
-      <option name="MAIN_CLASS_NAME" value="day01_Junit5Practice.HamcrestPractice" />
-      <option name="METHOD_NAME" value="test1" />
+      <option name="PACKAGE_NAME" value="day2_" />
+      <option name="MAIN_CLASS_NAME" value="day2_.SpartanPathParameters" />
+      <option name="METHOD_NAME" value="testingWithQueryParam" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HamcrestPractice.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SpartanQueryParameters.testingWithQueryParam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day01_Junit5Practice.*" />
+          <option name="PATTERN" value="day2_.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="day01_Junit5Practice" />
-      <option name="MAIN_CLASS_NAME" value="day01_Junit5Practice.HamcrestPractice" />
-      <option name="METHOD_NAME" value="test2" />
+      <option name="PACKAGE_NAME" value="day2_" />
+      <option name="MAIN_CLASS_NAME" value="day2_.SpartanQueryParameters" />
+      <option name="METHOD_NAME" value="testingWithQueryParam" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestAssuredMethodChaining.chainingMethodsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SpartanQueryParameters.testingWithQueryParam2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day01_Junit5Practice.*" />
+          <option name="PATTERN" value="day2_.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="day01_Junit5Practice" />
-      <option name="MAIN_CLASS_NAME" value="day01_Junit5Practice.RestAssuredMethodChaining" />
-      <option name="METHOD_NAME" value="chainingMethodsTest" />
+      <option name="PACKAGE_NAME" value="day2_" />
+      <option name="MAIN_CLASS_NAME" value="day2_.SpartanQueryParameters" />
+      <option name="METHOD_NAME" value="testingWithQueryParam2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestAssuredMethodChaining.testing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ZipCodeAPI.testCityToZip" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day01_Junit5Practice.*" />
+          <option name="PATTERN" value="day2_.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="day01_Junit5Practice" />
-      <option name="MAIN_CLASS_NAME" value="day01_Junit5Practice.RestAssuredMethodChaining" />
-      <option name="METHOD_NAME" value="testing" />
+      <option name="PACKAGE_NAME" value="day2_" />
+      <option name="MAIN_CLASS_NAME" value="day2_.ZipCodeAPI" />
+      <option name="METHOD_NAME" value="testCityToZip" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestAssuredMethodChaining.testingWithMatcher" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="movieAPI.testQueryParam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day01_Junit5Practice.*" />
+          <option name="PATTERN" value="day2_.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="day01_Junit5Practice" />
-      <option name="MAIN_CLASS_NAME" value="day01_Junit5Practice.RestAssuredMethodChaining" />
-      <option name="METHOD_NAME" value="testingWithMatcher" />
+      <option name="PACKAGE_NAME" value="day2_" />
+      <option name="MAIN_CLASS_NAME" value="day2_.movieAPI" />
+      <option name="METHOD_NAME" value="testQueryParam" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -115,11 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RestAssuredMethodChaining.testing" />
-        <item itemvalue="JUnit.RestAssuredMethodChaining.testingWithMatcher" />
-        <item itemvalue="JUnit.RestAssuredMethodChaining.chainingMethodsTest" />
-        <item itemvalue="JUnit.HamcrestPractice.test2" />
-        <item itemvalue="JUnit.HamcrestPractice.test1" />
+        <item itemvalue="JUnit.movieAPI.testQueryParam" />
+        <item itemvalue="JUnit.SpartanQueryParameters.testingWithQueryParam2" />
+        <item itemvalue="JUnit.SpartanQueryParameters.testingWithQueryParam" />
+        <item itemvalue="JUnit.SpartanPathParameters.testingWithQueryParam" />
+        <item itemvalue="JUnit.ZipCodeAPI.testCityToZip" />
       </list>
     </recent_temporary>
   </component>
@@ -141,25 +150,33 @@
       <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="120" y="143" width="1200" height="574" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/1440.23.1920.1057/0.23.1440.816@0.23.1440.816" timestamp="1597769228187" />
-    <state width="1348" height="460" key="GridCell.Tab.0.bottom" timestamp="1597784436663">
-      <screen x="0" y="23" width="1440" height="816" />
+    <state width="1348" height="3" key="GridCell.Tab.0.bottom" timestamp="1597956995743">
+      <screen x="0" y="23" width="1440" height="821" />
     </state>
+    <state width="1348" height="3" key="GridCell.Tab.0.bottom/0.23.1440.821@0.23.1440.821" timestamp="1597956995743" />
     <state width="1348" height="460" key="GridCell.Tab.0.bottom/1440.23.1920.1057/0.23.1440.816@0.23.1440.816" timestamp="1597784436663" />
-    <state width="1348" height="308" key="GridCell.Tab.0.bottom/1440.23.1920.1057/0.23.1440.821@0.23.1440.821" timestamp="1597783407873" />
-    <state width="1348" height="460" key="GridCell.Tab.0.center" timestamp="1597784436660">
-      <screen x="0" y="23" width="1440" height="816" />
+    <state width="1348" height="3" key="GridCell.Tab.0.bottom/1440.23.1920.1057/0.23.1440.821@0.23.1440.821" timestamp="1597937432087" />
+    <state width="1348" height="3" key="GridCell.Tab.0.bottom/1440.23.1920.1057/0.23.1440.822@0.23.1440.822" timestamp="1597942715801" />
+    <state width="1348" height="3" key="GridCell.Tab.0.center" timestamp="1597956995742">
+      <screen x="0" y="23" width="1440" height="821" />
     </state>
+    <state width="1348" height="3" key="GridCell.Tab.0.center/0.23.1440.821@0.23.1440.821" timestamp="1597956995742" />
     <state width="1348" height="460" key="GridCell.Tab.0.center/1440.23.1920.1057/0.23.1440.816@0.23.1440.816" timestamp="1597784436660" />
-    <state width="1348" height="308" key="GridCell.Tab.0.center/1440.23.1920.1057/0.23.1440.821@0.23.1440.821" timestamp="1597783407872" />
-    <state width="1348" height="460" key="GridCell.Tab.0.left" timestamp="1597784436658">
-      <screen x="0" y="23" width="1440" height="816" />
+    <state width="1348" height="3" key="GridCell.Tab.0.center/1440.23.1920.1057/0.23.1440.821@0.23.1440.821" timestamp="1597937432085" />
+    <state width="1348" height="3" key="GridCell.Tab.0.center/1440.23.1920.1057/0.23.1440.822@0.23.1440.822" timestamp="1597942715801" />
+    <state width="1348" height="3" key="GridCell.Tab.0.left" timestamp="1597956995741">
+      <screen x="0" y="23" width="1440" height="821" />
     </state>
+    <state width="1348" height="3" key="GridCell.Tab.0.left/0.23.1440.821@0.23.1440.821" timestamp="1597956995741" />
     <state width="1348" height="460" key="GridCell.Tab.0.left/1440.23.1920.1057/0.23.1440.816@0.23.1440.816" timestamp="1597784436658" />
-    <state width="1348" height="308" key="GridCell.Tab.0.left/1440.23.1920.1057/0.23.1440.821@0.23.1440.821" timestamp="1597783407871" />
-    <state width="1348" height="460" key="GridCell.Tab.0.right" timestamp="1597784436661">
-      <screen x="0" y="23" width="1440" height="816" />
+    <state width="1348" height="3" key="GridCell.Tab.0.left/1440.23.1920.1057/0.23.1440.821@0.23.1440.821" timestamp="1597937432085" />
+    <state width="1348" height="3" key="GridCell.Tab.0.left/1440.23.1920.1057/0.23.1440.822@0.23.1440.822" timestamp="1597942715800" />
+    <state width="1348" height="3" key="GridCell.Tab.0.right" timestamp="1597956995742">
+      <screen x="0" y="23" width="1440" height="821" />
     </state>
+    <state width="1348" height="3" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1597956995742" />
     <state width="1348" height="460" key="GridCell.Tab.0.right/1440.23.1920.1057/0.23.1440.816@0.23.1440.816" timestamp="1597784436661" />
-    <state width="1348" height="308" key="GridCell.Tab.0.right/1440.23.1920.1057/0.23.1440.821@0.23.1440.821" timestamp="1597783407873" />
+    <state width="1348" height="3" key="GridCell.Tab.0.right/1440.23.1920.1057/0.23.1440.821@0.23.1440.821" timestamp="1597937432086" />
+    <state width="1348" height="3" key="GridCell.Tab.0.right/1440.23.1920.1057/0.23.1440.822@0.23.1440.822" timestamp="1597942715801" />
   </component>
 </project>
