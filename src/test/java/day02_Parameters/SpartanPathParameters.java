@@ -1,4 +1,4 @@
-package day2_;
+package day02_Parameters;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
