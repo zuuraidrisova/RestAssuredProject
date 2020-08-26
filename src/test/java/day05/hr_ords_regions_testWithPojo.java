@@ -14,7 +14,7 @@ import java.util.List;
 import static io.restassured.RestAssured.*;
 import static io.restassured.RestAssured.given;
 
-public class hr_ords_testWithPojo {
+public class hr_ords_regions_testWithPojo {
 
         /*
           Here is the get request we need to make
@@ -54,6 +54,8 @@ public class hr_ords_testWithPojo {
 
 
             System.out.println("region = " + region);
+
+
         }
 
         @DisplayName("testing the /regions endpoint")
@@ -84,9 +86,9 @@ public class hr_ords_testWithPojo {
 
         }
 
-        //
+
     @Test
-    public void testRegion1(){
+    public void testRegionGetSingleItems(){
 
         Response response = get("/regions");
 
