@@ -80,13 +80,7 @@ public class hr_ords_jobsPojoTest {
         }
     }
 
-    // Get first region_name from the response using jsonPath
-    // Get first region_id from the response using jsonPath
-    // Get last region_name from the response using jsonPath
-    // Get last region_id from the response using jsonPath
-    // or use -1 for index to get last one
-    // get the list of region name from the response and save it to List<String>
-    // get a List<Region> from the response json
+
 
     @Test
     public void testJobsGetSingleItem(){

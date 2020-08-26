@@ -21,6 +21,9 @@ public class PostRequestWithPOJO {
     }
 
 
+    //Serialization : pojo to json  and
+    //De-Serialization : json to pojo
+
     @Test
     public void testPostRequestWithPojo(){
 

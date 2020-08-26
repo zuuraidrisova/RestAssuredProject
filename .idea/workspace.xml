@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ebefd970-32ab-434f-a153-3c45f1a025d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/day05/hr_ords_testWithPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/day05/hr_ords_regions_testWithPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/day05/hr_ords_countriesPojoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/day05/hr_ords_countriesPojoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/day05/hr_ords_jobsPojoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/day05/hr_ords_jobsPojoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +41,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.hr_ords_jobsPojoTest.testJobsGetSingleItem">
-    <configuration name="hr_ords_countriesPojoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.hr_ords_employeePojoTest.testEmployeesGetSingleItem">
+    <configuration name="hr_ords_departmentsPojoTest.testDepartmentsGetSingleItem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredProject" />
       <extension name="coverage">
         <pattern>
@@ -50,29 +51,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="day05" />
-      <option name="MAIN_CLASS_NAME" value="day05.hr_ords_countriesPojoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="hr_ords_jobsPojoTest.testCountries" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RestAssuredProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="day05.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="day05" />
-      <option name="MAIN_CLASS_NAME" value="day05.hr_ords_jobsPojoTest" />
-      <option name="METHOD_NAME" value="testCountries" />
+      <option name="MAIN_CLASS_NAME" value="day05.hr_ords_departmentsPojoTest" />
+      <option name="METHOD_NAME" value="testDepartmentsGetSingleItem" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="hr_ords_jobsPojoTest.testJobsGetSingleItem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="hr_ords_departmentsPojoTest.testDepartmentsJsonArrayToPojoList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredProject" />
       <extension name="coverage">
         <pattern>
@@ -81,14 +67,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="day05" />
-      <option name="MAIN_CLASS_NAME" value="day05.hr_ords_jobsPojoTest" />
-      <option name="METHOD_NAME" value="testJobsGetSingleItem" />
+      <option name="MAIN_CLASS_NAME" value="day05.hr_ords_departmentsPojoTest" />
+      <option name="METHOD_NAME" value="testDepartmentsJsonArrayToPojoList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="hr_ords_jobsPojoTest.testJobsJsonArrayToPojoList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="hr_ords_employeePojoTest.testEmployees" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredProject" />
       <extension name="coverage">
         <pattern>
@@ -97,14 +83,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="day05" />
-      <option name="MAIN_CLASS_NAME" value="day05.hr_ords_jobsPojoTest" />
-      <option name="METHOD_NAME" value="testJobsJsonArrayToPojoList" />
+      <option name="MAIN_CLASS_NAME" value="day05.hr_ords_employeePojoTest" />
+      <option name="METHOD_NAME" value="testEmployees" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="hr_ords_locationsPojoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="hr_ords_employeePojoTest.testEmployeesGetSingleItem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredProject" />
       <extension name="coverage">
         <pattern>
@@ -113,19 +99,36 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="day05" />
-      <option name="MAIN_CLASS_NAME" value="day05.hr_ords_locationsPojoTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="day05.hr_ords_employeePojoTest" />
+      <option name="METHOD_NAME" value="testEmployeesGetSingleItem" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hr_ords_employeePojoTest.testEmployeesJsonArrayToPojoList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestAssuredProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day05.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="day05" />
+      <option name="MAIN_CLASS_NAME" value="day05.hr_ords_employeePojoTest" />
+      <option name="METHOD_NAME" value="testEmployeesJsonArrayToPojoList" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.hr_ords_jobsPojoTest.testJobsGetSingleItem" />
-        <item itemvalue="JUnit.hr_ords_jobsPojoTest.testJobsJsonArrayToPojoList" />
-        <item itemvalue="JUnit.hr_ords_jobsPojoTest.testCountries" />
-        <item itemvalue="JUnit.hr_ords_countriesPojoTest" />
-        <item itemvalue="JUnit.hr_ords_locationsPojoTest" />
+        <item itemvalue="JUnit.hr_ords_employeePojoTest.testEmployeesGetSingleItem" />
+        <item itemvalue="JUnit.hr_ords_employeePojoTest.testEmployeesJsonArrayToPojoList" />
+        <item itemvalue="JUnit.hr_ords_employeePojoTest.testEmployees" />
+        <item itemvalue="JUnit.hr_ords_departmentsPojoTest.testDepartmentsGetSingleItem" />
+        <item itemvalue="JUnit.hr_ords_departmentsPojoTest.testDepartmentsJsonArrayToPojoList" />
       </list>
     </recent_temporary>
   </component>
@@ -151,20 +154,20 @@
       <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="120" y="143" width="1200" height="574" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/1440.23.1920.1057/0.23.1440.816@0.23.1440.816" timestamp="1597769228187" />
-    <state x="489" y="53" key="#com.intellij.ide.util.MemberChooser" timestamp="1598409203390">
+    <state x="489" y="53" key="#com.intellij.ide.util.MemberChooser" timestamp="1598466963116">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
-    <state x="489" y="53" key="#com.intellij.ide.util.MemberChooser/0.23.1440.820@0.23.1440.820" timestamp="1598409203390" />
+    <state x="489" y="53" key="#com.intellij.ide.util.MemberChooser/0.23.1440.820@0.23.1440.820" timestamp="1598466963116" />
     <state x="489" y="53" key="#com.intellij.ide.util.MemberChooser/1440.23.1920.1057/0.23.1440.820@0.23.1440.820" timestamp="1598385636908" />
     <state x="458" y="272" width="524" height="320" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1598384087987">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
     <state x="458" y="272" width="524" height="320" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1440.23.1920.1057/0.23.1440.820@0.23.1440.820" timestamp="1598384087987" />
-    <state width="1348" height="3" key="GridCell.Tab.0.bottom" timestamp="1598410164703">
+    <state width="1348" height="589" key="GridCell.Tab.0.bottom" timestamp="1598469903002">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
     <state width="1348" height="33" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1598240525667" />
-    <state width="1348" height="3" key="GridCell.Tab.0.bottom/0.23.1440.820@0.23.1440.820" timestamp="1598410164703" />
+    <state width="1348" height="589" key="GridCell.Tab.0.bottom/0.23.1440.820@0.23.1440.820" timestamp="1598469903002" />
     <state width="1348" height="229" key="GridCell.Tab.0.bottom/0.23.1440.821@0.23.1440.821" timestamp="1598236071608" />
     <state width="1348" height="471" key="GridCell.Tab.0.bottom/0.23.1440.823@0.23.1440.823" timestamp="1597976816272" />
     <state width="1348" height="460" key="GridCell.Tab.0.bottom/1440.23.1920.1057/0.23.1440.816@0.23.1440.816" timestamp="1597784436663" />
@@ -172,11 +175,11 @@
     <state width="1348" height="3" key="GridCell.Tab.0.bottom/1440.23.1920.1057/0.23.1440.821@0.23.1440.821" timestamp="1598302890185" />
     <state width="1348" height="3" key="GridCell.Tab.0.bottom/1440.23.1920.1057/0.23.1440.822@0.23.1440.822" timestamp="1598302070321" />
     <state width="1348" height="3" key="GridCell.Tab.0.bottom/1440.23.1920.1057/0.23.1440.823@0.23.1440.823" timestamp="1598295196714" />
-    <state width="1348" height="3" key="GridCell.Tab.0.center" timestamp="1598410164703">
+    <state width="1348" height="589" key="GridCell.Tab.0.center" timestamp="1598469903001">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
     <state width="1348" height="33" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1598240525666" />
-    <state width="1348" height="3" key="GridCell.Tab.0.center/0.23.1440.820@0.23.1440.820" timestamp="1598410164703" />
+    <state width="1348" height="589" key="GridCell.Tab.0.center/0.23.1440.820@0.23.1440.820" timestamp="1598469903001" />
     <state width="1348" height="229" key="GridCell.Tab.0.center/0.23.1440.821@0.23.1440.821" timestamp="1598236071607" />
     <state width="1348" height="471" key="GridCell.Tab.0.center/0.23.1440.823@0.23.1440.823" timestamp="1597976816271" />
     <state width="1348" height="460" key="GridCell.Tab.0.center/1440.23.1920.1057/0.23.1440.816@0.23.1440.816" timestamp="1597784436660" />
@@ -184,11 +187,11 @@
     <state width="1348" height="3" key="GridCell.Tab.0.center/1440.23.1920.1057/0.23.1440.821@0.23.1440.821" timestamp="1598302890183" />
     <state width="1348" height="3" key="GridCell.Tab.0.center/1440.23.1920.1057/0.23.1440.822@0.23.1440.822" timestamp="1598302070320" />
     <state width="1348" height="3" key="GridCell.Tab.0.center/1440.23.1920.1057/0.23.1440.823@0.23.1440.823" timestamp="1598295196713" />
-    <state width="1348" height="3" key="GridCell.Tab.0.left" timestamp="1598410164702">
+    <state width="1348" height="589" key="GridCell.Tab.0.left" timestamp="1598469903001">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
     <state width="1348" height="33" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1598240525666" />
-    <state width="1348" height="3" key="GridCell.Tab.0.left/0.23.1440.820@0.23.1440.820" timestamp="1598410164702" />
+    <state width="1348" height="589" key="GridCell.Tab.0.left/0.23.1440.820@0.23.1440.820" timestamp="1598469903001" />
     <state width="1348" height="229" key="GridCell.Tab.0.left/0.23.1440.821@0.23.1440.821" timestamp="1598236071607" />
     <state width="1348" height="471" key="GridCell.Tab.0.left/0.23.1440.823@0.23.1440.823" timestamp="1597976816270" />
     <state width="1348" height="460" key="GridCell.Tab.0.left/1440.23.1920.1057/0.23.1440.816@0.23.1440.816" timestamp="1597784436658" />
@@ -196,11 +199,11 @@
     <state width="1348" height="3" key="GridCell.Tab.0.left/1440.23.1920.1057/0.23.1440.821@0.23.1440.821" timestamp="1598302890181" />
     <state width="1348" height="3" key="GridCell.Tab.0.left/1440.23.1920.1057/0.23.1440.822@0.23.1440.822" timestamp="1598302070320" />
     <state width="1348" height="3" key="GridCell.Tab.0.left/1440.23.1920.1057/0.23.1440.823@0.23.1440.823" timestamp="1598295196712" />
-    <state width="1348" height="3" key="GridCell.Tab.0.right" timestamp="1598410164703">
+    <state width="1348" height="589" key="GridCell.Tab.0.right" timestamp="1598469903001">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
     <state width="1348" height="33" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1598240525667" />
-    <state width="1348" height="3" key="GridCell.Tab.0.right/0.23.1440.820@0.23.1440.820" timestamp="1598410164703" />
+    <state width="1348" height="589" key="GridCell.Tab.0.right/0.23.1440.820@0.23.1440.820" timestamp="1598469903001" />
     <state width="1348" height="229" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1598236071607" />
     <state width="1348" height="471" key="GridCell.Tab.0.right/0.23.1440.823@0.23.1440.823" timestamp="1597976816271" />
     <state width="1348" height="460" key="GridCell.Tab.0.right/1440.23.1920.1057/0.23.1440.816@0.23.1440.816" timestamp="1597784436661" />
@@ -208,27 +211,31 @@
     <state width="1348" height="3" key="GridCell.Tab.0.right/1440.23.1920.1057/0.23.1440.821@0.23.1440.821" timestamp="1598302890184" />
     <state width="1348" height="3" key="GridCell.Tab.0.right/1440.23.1920.1057/0.23.1440.822@0.23.1440.822" timestamp="1598302070321" />
     <state width="1348" height="3" key="GridCell.Tab.0.right/1440.23.1920.1057/0.23.1440.823@0.23.1440.823" timestamp="1598295196713" />
-    <state width="1348" height="3" key="GridCell.Tab.1.bottom" timestamp="1598370966970">
+    <state width="1348" height="3" key="GridCell.Tab.1.bottom" timestamp="1598410511869">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
+    <state width="1348" height="3" key="GridCell.Tab.1.bottom/0.23.1440.820@0.23.1440.820" timestamp="1598410511869" />
     <state width="1348" height="229" key="GridCell.Tab.1.bottom/0.23.1440.821@0.23.1440.821" timestamp="1598236071608" />
     <state width="1348" height="3" key="GridCell.Tab.1.bottom/1440.23.1920.1057/0.23.1440.820@0.23.1440.820" timestamp="1598370966970" />
     <state width="1348" height="229" key="GridCell.Tab.1.bottom/1440.23.1920.1057/0.23.1440.821@0.23.1440.821" timestamp="1598022807494" />
-    <state width="1348" height="3" key="GridCell.Tab.1.center" timestamp="1598370966969">
+    <state width="1348" height="3" key="GridCell.Tab.1.center" timestamp="1598410511869">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
+    <state width="1348" height="3" key="GridCell.Tab.1.center/0.23.1440.820@0.23.1440.820" timestamp="1598410511869" />
     <state width="1348" height="229" key="GridCell.Tab.1.center/0.23.1440.821@0.23.1440.821" timestamp="1598236071608" />
     <state width="1348" height="3" key="GridCell.Tab.1.center/1440.23.1920.1057/0.23.1440.820@0.23.1440.820" timestamp="1598370966969" />
     <state width="1348" height="229" key="GridCell.Tab.1.center/1440.23.1920.1057/0.23.1440.821@0.23.1440.821" timestamp="1598022807493" />
-    <state width="1348" height="3" key="GridCell.Tab.1.left" timestamp="1598370966968">
+    <state width="1348" height="3" key="GridCell.Tab.1.left" timestamp="1598410511869">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
+    <state width="1348" height="3" key="GridCell.Tab.1.left/0.23.1440.820@0.23.1440.820" timestamp="1598410511869" />
     <state width="1348" height="229" key="GridCell.Tab.1.left/0.23.1440.821@0.23.1440.821" timestamp="1598236071608" />
     <state width="1348" height="3" key="GridCell.Tab.1.left/1440.23.1920.1057/0.23.1440.820@0.23.1440.820" timestamp="1598370966968" />
     <state width="1348" height="229" key="GridCell.Tab.1.left/1440.23.1920.1057/0.23.1440.821@0.23.1440.821" timestamp="1598022807493" />
-    <state width="1348" height="3" key="GridCell.Tab.1.right" timestamp="1598370966969">
+    <state width="1348" height="3" key="GridCell.Tab.1.right" timestamp="1598410511869">
       <screen x="0" y="23" width="1440" height="820" />
     </state>
+    <state width="1348" height="3" key="GridCell.Tab.1.right/0.23.1440.820@0.23.1440.820" timestamp="1598410511869" />
     <state width="1348" height="229" key="GridCell.Tab.1.right/0.23.1440.821@0.23.1440.821" timestamp="1598236071608" />
     <state width="1348" height="3" key="GridCell.Tab.1.right/1440.23.1920.1057/0.23.1440.820@0.23.1440.820" timestamp="1598370966969" />
     <state width="1348" height="229" key="GridCell.Tab.1.right/1440.23.1920.1057/0.23.1440.821@0.23.1440.821" timestamp="1598022807493" />

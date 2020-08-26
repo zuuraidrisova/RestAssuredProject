@@ -85,7 +85,7 @@ public class hr_ords_countriesPojoTest {
 
 
     @Test
-    public void testLocationsGetSingleItem(){
+    public void testCountriesGetSingleItem(){
 
         Response response =
 
