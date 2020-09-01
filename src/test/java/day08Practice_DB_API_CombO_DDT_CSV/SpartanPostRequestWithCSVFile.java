@@ -1,4 +1,4 @@
-package day08Practice_DB_API_Combination;
+package day08Practice_DB_API_CombO_DDT_CSV;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -9,7 +9,6 @@ import pojo.Spartan;
 
 
 import static io.restassured.RestAssured.*;
-import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
 
 

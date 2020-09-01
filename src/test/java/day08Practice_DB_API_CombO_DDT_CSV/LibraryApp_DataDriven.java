@@ -1,4 +1,4 @@
-package day08Practice_DB_API_Combination;
+package day08Practice_DB_API_CombO_DDT_CSV;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;

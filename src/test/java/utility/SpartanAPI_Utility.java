@@ -5,7 +5,7 @@ import pojo.Spartan;
 
 public class SpartanAPI_Utility {
 
-    protected static Spartan createRandomSpartanObject() {
+    public static Spartan createRandomSpartanObject() {
 
         Faker faker = new Faker();
 
