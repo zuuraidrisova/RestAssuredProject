@@ -1,4 +1,4 @@
-package day07;
+package day07_DB_API_Combination;
 
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.AfterAll;
