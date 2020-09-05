@@ -11,6 +11,9 @@ public class Spartan2 {
 		add toString method so we can print it out
 
      */
+
+    //this pojo is for retrieving data, for get request
+
     private  int id;
     private  String name;
     private  String gender;

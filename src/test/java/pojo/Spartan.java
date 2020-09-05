@@ -1,7 +1,11 @@
 package pojo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Spartan {
 
+    //this pojo is for creating a spartan, for post request
     private String name;
     private  String gender;
     private long phone;
@@ -43,5 +47,12 @@ public class Spartan {
         this.phone = phone;
     }
 
-
+    @Override
+    public String toString() {
+        return "Spartan{" +
+                "name='" + name + '\'' +
+                ", gender='" + gender + '\'' +
+                ", phone=" + phone +
+                '}';
+    }
 }
