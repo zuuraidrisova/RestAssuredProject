@@ -37,7 +37,7 @@ public class newsAPITest {
 
         //?country=us
         given().
-                header("Authorization", "Bearer 47995edfa3ee4079b8b677d9619aff84").
+                header("Authorization", "Bearer "+apiKey).
                 queryParam("country", "us").
                 log().all().
         get("/top-headlines");
