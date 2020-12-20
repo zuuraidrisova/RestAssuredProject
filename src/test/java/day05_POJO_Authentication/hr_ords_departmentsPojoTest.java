@@ -31,6 +31,7 @@ public class hr_ords_departmentsPojoTest {
 
     }
 
+
     //Serialization : pojo to json  and
     //De-Serialization : json to pojo
 

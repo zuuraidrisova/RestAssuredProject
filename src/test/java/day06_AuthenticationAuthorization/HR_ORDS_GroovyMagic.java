@@ -82,14 +82,14 @@ public class HR_ORDS_GroovyMagic {
 
         System.out.println("===========================================");
 
-      String result = jsonPath.getString("items.find{ it.employee_id == 105}.last_name");
+       String result = jsonPath.getString("items.find{ it.employee_id == 105}.last_name");
 
         System.out.println("result = " + result);
 
         System.out.println("===========================================");
 
         // using above example : find the salary of employee with email value LDEHAAN
-       int salary = jsonPath.getInt("items.find{ it.email == \"LDEHAAN\"}.salary");
+        int salary = jsonPath.getInt("items.find{ it.email == \"LDEHAAN\"}.salary");
 
         System.out.println("salary = " + salary);
 
@@ -134,6 +134,7 @@ public class HR_ORDS_GroovyMagic {
         String  minSalaryGuy = jsonPath.getString("items.min{it.salary}.first_name");
 
         System.out.println("minSalaryGuy = " + minSalaryGuy);
+
     }
 
 

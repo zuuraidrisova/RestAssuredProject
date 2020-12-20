@@ -40,7 +40,7 @@ public class SpartanTest {
     @Test
     public void testAllSpartans(){
 
-        // send the same request specifiying the accept header is application/json
+        // send the same request specifying the accept header is application/json
         // use baseuri basepath , check status code 200 , contentType header is json
         //http://35.153.51.63:8000
         given().

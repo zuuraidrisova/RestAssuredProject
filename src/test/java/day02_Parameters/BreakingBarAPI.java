@@ -18,7 +18,7 @@ public class BreakingBarAPI {
         then().
                 statusCode(is(200)).
                 header("Content-Type", is("application/json; charset=utf-8"));
-        //contentType(is("application/json; charset=utf-8"));
+              //contentType(is("application/json; charset=utf-8"));
 
 
     }

@@ -32,7 +32,7 @@ public class getOneSpartanMethod {
 
                          given().
                                  contentType(ContentType.JSON).
-                                body(dataMap).
+                                 body(dataMap).
                           when().
                                  post("/spartans");
 

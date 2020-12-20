@@ -78,13 +78,11 @@ public class PutAndPatch {
 
 
 
-
     @DisplayName("testing put request method with Pojo")
     @Test
     public void testPutRequestWithPojo(){
 
         //POJO is plain old java object
-
 
         //put request to update spartan with id 210
         //name: put with pojo, gender :Male, phone; 7283519231

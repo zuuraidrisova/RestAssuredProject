@@ -43,7 +43,6 @@ public class HamcrestMatcherEveryItem {
 
         assertThat(num1, allOf(greaterThan(0), lessThan(50)));
 
-
-
     }
+
 }

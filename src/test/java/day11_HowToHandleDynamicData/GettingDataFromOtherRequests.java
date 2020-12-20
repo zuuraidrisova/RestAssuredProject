@@ -3,10 +3,7 @@ package day11_HowToHandleDynamicData;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.RepeatedTest;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import pojo.Spartan2;
 import utility.ConfigurationReader;
 
@@ -46,7 +43,7 @@ public class GettingDataFromOtherRequests {
  *      *  4 , eventually randomize the way you get the ID from List of Pojo
  */
 
-    @DisplayName("test GET /Spartans/{id}")
+    @DisplayName("test GET /spartans/{id}")
     @Test
     public void testGetDataFromOtherRequests(){
 
@@ -113,7 +110,6 @@ public class GettingDataFromOtherRequests {
 
         System.out.println("randomSpartanObject = " + randomSpartanObject);
 
-
         given().
                 pathParam("id",randomSpartanObject.getId()).
          when().
@@ -126,6 +122,11 @@ public class GettingDataFromOtherRequests {
 
 
 
+    @AfterAll
+    public static void tearDown(){
+
+        RestAssured.reset();
+    }
 
 
 

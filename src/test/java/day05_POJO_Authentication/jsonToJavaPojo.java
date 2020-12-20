@@ -16,7 +16,7 @@ public class jsonToJavaPojo {
 
 
     //json to java object
-    //store the result og get spartans/{id} into pojo object
+    //store the result of get spartans/{id} into pojo object
     /*
     {
     "id": 253,
@@ -45,6 +45,7 @@ public class jsonToJavaPojo {
         int newID = SecureSpartanTest.createRandomSpartan();
 
         Response response =
+
         given().
                 log().all().
                 auth().basic("admin","admin").
@@ -102,7 +103,7 @@ public class jsonToJavaPojo {
 
         //print out the first  id and name from response
 
-       JsonPath jp =  response.jsonPath();
+        JsonPath jp =  response.jsonPath();
 
         System.out.println("first guy  id = " + jp.getInt("content[0].id"));
         System.out.println("first guy name = " + jp.getString("content[0].name"));

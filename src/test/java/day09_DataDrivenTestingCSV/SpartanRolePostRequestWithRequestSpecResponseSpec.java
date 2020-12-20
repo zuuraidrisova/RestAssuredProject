@@ -51,7 +51,6 @@ public class SpartanRolePostRequestWithRequestSpecResponseSpec {
 
         Spartan spartan = SpartanAPI_Utility.createRandomSpartanObject();
 
-
         validPostRequestSpec = given().
 
                 auth().basic("admin", "admin").
@@ -72,8 +71,6 @@ public class SpartanRolePostRequestWithRequestSpecResponseSpec {
                 expectBody("data.phone", equalTo(spartan.getPhone())).
                 expectBody("data.id", is(notNullValue())).
                 build();
-
-
 
 
     }

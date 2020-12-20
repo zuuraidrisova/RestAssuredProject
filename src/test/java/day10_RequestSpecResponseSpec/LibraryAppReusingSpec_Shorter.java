@@ -6,6 +6,7 @@ import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -19,7 +20,7 @@ public class LibraryAppReusingSpec_Shorter {
 
     /*
     We will use these 3 endpoints :
-* GET /dahsboard_status
+* GET /dashboard_stats
 * GET /get_book_categories
 * GET /get_all_users
 We want to save the Request spec for
@@ -94,4 +95,12 @@ We want to save the Response spec for
 
 
     }
+
+    @AfterAll
+    public static void tearDown(){
+
+        RestAssured.reset();
+
+    }
+
 }

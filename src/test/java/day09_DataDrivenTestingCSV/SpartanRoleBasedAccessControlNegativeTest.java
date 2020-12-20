@@ -108,7 +108,7 @@ public class SpartanRoleBasedAccessControlNegativeTest {
                 header("Date", is(notNullValue())); //checking the date header is not null
 
 
-
     }
+
 
 }

@@ -14,7 +14,6 @@ public class Spartan {
 
     }
 
-
     public Spartan(String name, String gender, long phone){
 
         this.name = name;
@@ -55,4 +54,6 @@ public class Spartan {
                 ", phone=" + phone +
                 '}';
     }
+
+
 }

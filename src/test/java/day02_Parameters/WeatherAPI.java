@@ -38,4 +38,6 @@ public class WeatherAPI {
                 statusCode(is(200)).
                 log().all();
     }
+
+
 }

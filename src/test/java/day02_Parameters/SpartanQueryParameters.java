@@ -26,11 +26,10 @@ public class SpartanQueryParameters {
         given().
                 log().all().
         when().
-                get("spartans/search?gender=Male&namecontains=ea").
+                get("spartans/search?gender=Male&nameContains=ea").
          then().
                 statusCode(is(200)).
                 log().all();
-
 
     }
 

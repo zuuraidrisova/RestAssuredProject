@@ -98,12 +98,4 @@ public class JsonSchemaValidation {
     }
 
 
-
-
-
-
-
-
-
-
 }

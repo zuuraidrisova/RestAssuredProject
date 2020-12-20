@@ -24,7 +24,6 @@ public class hr_ords_countriesPojoTest {
               request :  GET /regions/{region_id}
          */
 
-
     @BeforeAll
     public static void setUp(){
 
@@ -124,6 +123,7 @@ public class hr_ords_countriesPojoTest {
         List<Countries> countriesList = jsonPath.getList("items");
 
         System.out.println("countriesList = " + countriesList);
+
     }
 
 

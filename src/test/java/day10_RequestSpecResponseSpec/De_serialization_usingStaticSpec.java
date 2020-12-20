@@ -5,6 +5,7 @@ import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -71,7 +72,7 @@ hint : you will need to create 2 POJO class called Category , User;
         JsonPath jsonPath = response.jsonPath();
 
         //here we are saying turn json to pojo
-        List<Category> listOfCategories = jsonPath.getList("");
+        List<Category> listOfCategories = jsonPath.getList("", Category.class);
 
         System.out.println("listOfCategories = " + listOfCategories);
 
@@ -106,8 +107,6 @@ hint : you will need to create 2 POJO class called Category , User;
         System.out.println("listOfUsers = " + listOfUsers);
     }
 
-
-
     //get the Map<String,Integer> object out of the response of GET /dashboard_stats
 
     @DisplayName("testing /dashboard_status Endpoint with Spec")
@@ -124,6 +123,14 @@ hint : you will need to create 2 POJO class called Category , User;
        Map<String, Integer> dashBoardStats = jsonPath.getMap("");
 
         System.out.println("dashBoardStats = " + dashBoardStats);
+
+    }
+
+
+    @AfterAll
+    public static void tearDown(){
+
+        RestAssured.reset();
 
     }
 

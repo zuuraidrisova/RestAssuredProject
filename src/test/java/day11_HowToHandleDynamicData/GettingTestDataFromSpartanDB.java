@@ -37,7 +37,6 @@ public class GettingTestDataFromSpartanDB {
     }
 
 
-
     @DisplayName("Testing get /spartans/{id} by getting the id from DB")
     @Test
     public void testDataFromDB(){
@@ -120,6 +119,7 @@ public class GettingTestDataFromSpartanDB {
 
         System.out.println("randomRowNum = " + randomRowNum);
         System.out.println("randomRowMap = " + randomRowMap);
+
     }
 
 

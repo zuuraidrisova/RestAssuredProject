@@ -23,6 +23,7 @@ public class PutRequestExample {
     }
 
 
+
     @DisplayName("updating the existing data")
     @Test
     public void testUpdateSpartan(){

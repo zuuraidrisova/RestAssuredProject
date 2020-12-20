@@ -3,6 +3,7 @@ package day10_RequestSpecResponseSpec;
 import com.github.javafaker.Faker;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -24,11 +25,10 @@ public class GettingTestDataFromSpartanDB {
         baseURI = ConfigurationReader.getProperty("spartan1.base_url");
         RestAssured.basePath = "/api";
 
+
         DB_Utility.createConnection(ConfigurationReader.getProperty("active_env"));
 
-
     }
-
 
 
     @DisplayName("Testing get /spartans/{id} by getting the id from DB")
@@ -110,11 +110,16 @@ public class GettingTestDataFromSpartanDB {
 
         Map<String, String> randomRowMap = DB_Utility.getRowMap(randomRowNum);
 
-
         System.out.println("randomRowNum = " + randomRowNum);
         System.out.println("randomRowMap = " + randomRowMap);
+
     }
 
+    @AfterAll
+    public static void tearDown(){
 
+        RestAssured.reset();
+        DB_Utility.destroy();
+    }
 
 }

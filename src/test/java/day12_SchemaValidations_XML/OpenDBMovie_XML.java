@@ -1,6 +1,8 @@
 package day12_SchemaValidations_XML;
 
+import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
@@ -33,13 +35,13 @@ public class OpenDBMovie_XML {
                 body("root.movie.@rated",is("PG")).
                 body("root.movie.@released", is("31 Mar 2017"));
 
-
-
-
-
-
     }
 
+    @AfterAll
+    public static void tearDown(){
+
+        RestAssured.reset();
+    }
 
 
 }

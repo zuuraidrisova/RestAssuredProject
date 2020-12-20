@@ -52,9 +52,7 @@ public class hr_ords_regions_testWithPojo {
 
             Region region = response.as(Region.class);
 
-
             System.out.println("region = " + region);
-
 
         }
 
@@ -107,7 +105,6 @@ public class hr_ords_regions_testWithPojo {
         // or use -1 for index to get last one
         System.out.println("last region id = " + jsonPath.getInt("items[-1].region_id"));
 
-
         // get the list of region name from the response and save it to List<String>
         List<String> listRegionName = jsonPath.getList("items.region_name");
 
@@ -117,6 +114,8 @@ public class hr_ords_regions_testWithPojo {
         List<Region> regionList = jsonPath.getList("items", Region.class);
 
         System.out.println("regionList = " + regionList);
+
     }
+
 
 }

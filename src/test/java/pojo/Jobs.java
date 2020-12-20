@@ -20,6 +20,7 @@ public class Jobs {
     public Jobs(){
 
     }
+
     public Jobs(String job_id, String job_title, int min_salary, int max_salary){
 
         this.job_id = job_id;

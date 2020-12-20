@@ -14,7 +14,6 @@ public class TestExecutionOrderInJunit5 {
     // @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
     //then i need to put  @Order(1) annotation to each test method level
 
-
     @Order(1)
     @Test
     public void testZ(){

@@ -21,6 +21,7 @@ public class MySQL_Test {
     public static void setUp(){
 
         DB_Utility.createConnection("library1");
+
     }
 
     @DisplayName("test things out to check whether DB_Utility is working properly")

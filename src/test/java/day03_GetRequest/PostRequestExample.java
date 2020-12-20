@@ -51,9 +51,6 @@ public class PostRequestExample {
                 //body("data.phone", is("2189634842"));
 
 
-
-
-
     }
 
 
@@ -89,7 +86,7 @@ public class PostRequestExample {
         System.out.println("name using path  = " + response.path("data.name"));
 
 
-       JsonPath jsonPath =  response.jsonPath();
+        JsonPath jsonPath =  response.jsonPath();
 
          int id =  jsonPath.getInt("data.id");
 

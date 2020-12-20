@@ -19,6 +19,5 @@ public class HowDidActiveEnvWorkedInOurCode {
 
         System.out.println("db1URL = " + db1URL);
 
-
     }
 }

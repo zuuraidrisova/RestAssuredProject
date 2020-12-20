@@ -11,10 +11,12 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 public class HamcrestPractice {
+
 //hamcrest library is an assertion library, the aim of which is to make test more human readable
     //using lots of human readable matchers like something(somethingElse)
     //most importantly restAssured use hamcrest matcher when we chain multiple restAssured methods
         //hamcrest library already come with RestAssured dependency
+
     @Test
     public void test1(){
 
@@ -29,7 +31,7 @@ public class HamcrestPractice {
 
         //hamcrest library use the assertThat method for all assertions
         //hamcrest use built in matchers to do assertions
-        //ex: is(some value),
+            //ex: is(some value),
             // equalTo(some value),
             // is(equalTo(some value)),
 

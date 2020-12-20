@@ -16,7 +16,6 @@ public class ReadingCSVFileFromTheTest {
     @CsvFileSource(resources = "/data.csv", numLinesToSkip = 1)
     public void simpleRead(int num1, int num2){
 
-
         System.out.println("num1 = " + num1);
         System.out.println("num2 = " + num2);
 
@@ -50,13 +49,14 @@ public class ReadingCSVFileFromTheTest {
                 //@ParameterizedTest(name = "some custom name here")
     //how do i refer the row number  in my csv file
                 //u can use index in the name String to refer row number
-    //how do i refer the columnt data in my display name
+    //how do i refer the column data in my display name
                 //in the name String we can add {columnIndex}
                 //{0} for first column
                 //{1} for second column and so on
 
    // @ParameterizedTest(name = "B18 Learning Math {index} ")
-    // WHERE DO I ADD the display name to start with ? add it to @ParameterizedTest (name = " here")
+    // WHERE DO I ADD the display name to start with ?
+    // add it to @ParameterizedTest (name = " here")
 
     // we want display like this so we know exactly what we tested in each iteration
     // Row1 : 5+4=9
@@ -66,7 +66,6 @@ public class ReadingCSVFileFromTheTest {
     @ParameterizedTest(name = "iteration {index} -> {0} + {1} = {2}")
     @CsvFileSource(resources = "/numbers.csv", numLinesToSkip = 1)
     public void testAddition(int num1, int num2, int result){
-
 
         assertThat(num1 + num2, equalTo(result));
 

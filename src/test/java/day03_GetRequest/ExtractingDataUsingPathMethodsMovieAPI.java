@@ -62,7 +62,6 @@ public class ExtractingDataUsingPathMethodsMovieAPI {
         System.out.println("Awards:  " + responseMap.get("Awards"));
 
 
-
         //store first rating json object into a map
 
         Map<String , Object> firstRatingMap = jp.getMap("Ratings[0]");

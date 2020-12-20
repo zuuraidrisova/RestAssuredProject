@@ -21,7 +21,7 @@ public class Spartan2 {
 
     public Spartan2(){
 
-        //does not do anything bu required  for jackson to work
+        //does not do anything but required  for jackson to work
        //default constructor with no arguments
     }
 

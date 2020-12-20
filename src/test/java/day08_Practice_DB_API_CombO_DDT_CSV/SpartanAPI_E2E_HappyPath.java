@@ -14,7 +14,6 @@ public class SpartanAPI_E2E_HappyPath {
 
     //we can make our POJO at class level
 
-
     //Spartan crud operation happy path ==> crud is create read update and delete
     // all should pass so we say happy path
 

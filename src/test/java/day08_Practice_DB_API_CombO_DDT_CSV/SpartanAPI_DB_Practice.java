@@ -46,6 +46,7 @@ public class SpartanAPI_DB_Practice {
 
     }
 
+
     @DisplayName("Testing out my DB Connection")
     @Test
     public void testDB(){
@@ -143,8 +144,6 @@ public class SpartanAPI_DB_Practice {
 
 
     }
-
-
 
 
     @AfterAll

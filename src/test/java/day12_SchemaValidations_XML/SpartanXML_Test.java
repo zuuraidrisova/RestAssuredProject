@@ -4,6 +4,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -35,6 +36,7 @@ Verify the first spartan name, id , gender .
         RestAssured.basePath = "/api";
 
     }
+
 
     @DisplayName("Test XML Response from get /spartans endpoint")
     @Test
@@ -72,7 +74,7 @@ Verify the first spartan name, id , gender .
         XmlPath xmlPath = response.xmlPath();
 
 
-       int firstSpartanID =  xmlPath.getInt("List.item[0].id");
+        int firstSpartanID =  xmlPath.getInt("List.item[0].id");
 
         System.out.println("firstSpartanID = " + firstSpartanID);
 
@@ -140,8 +142,15 @@ Verify the first spartan name, id , gender .
         System.out.println("listOfUniqueNames.size() = " + listOfUniqueNames.size());
 
         System.out.println("listOfNames.size() = " + listOfNames.size());
+
     }
 
+
+    @AfterAll
+    public static void tearDown(){
+
+        RestAssured.reset();
+    }
 
 
 

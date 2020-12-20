@@ -5,6 +5,7 @@ import pojo.Spartan;
 
 public class SpartanAPI_Utility {
 
+
     public static Spartan createRandomSpartanObject() {
 
         Faker faker = new Faker();
@@ -15,10 +16,12 @@ public class SpartanAPI_Utility {
 
         // always getting long number outside range of int to avoid errors
 
-        long phone    = faker.number().numberBetween(5000000000l,9999999999L);
+        long phone = faker.number().numberBetween(5000000000l,9999999999L);
         Spartan randomSpartanObject = new Spartan(name,gender,phone);
 
         System.out.println("Created Random Spartan Object : " + randomSpartanObject);
         return randomSpartanObject ;
     }
+
+
 }

@@ -30,7 +30,6 @@ public class LibraryApp_DataDriven {
         RestAssured.basePath ="/rest/v1";
     }
 
-
     //give a name to ur test in this format
     //iteration {index} | username : {firstColumn}, password: {secondColumn}
 
@@ -61,9 +60,7 @@ public class LibraryApp_DataDriven {
                 body("token", is(notNullValue()));
 
 
-
     }
-
 
     @AfterAll
     public static void tearDown(){
@@ -71,8 +68,6 @@ public class LibraryApp_DataDriven {
         RestAssured.reset();
 
     }
-
-
 
 
 }

@@ -1,6 +1,5 @@
 package day09_DataDrivenTestingCSV;
 
-
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
@@ -8,11 +7,11 @@ import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pojo.Spartan;
-
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -36,9 +35,6 @@ public class SpartanRoleBasedAccessControlNegativeTest_Reuse {
     public void testUserCannotDeleteData(){
 
         //building reusable request specification
-        //using
-
-        //RequestSpecBuilder rb = new RequestSpecBuilder();
 
         RequestSpecification   requestSpec = given().
 
@@ -57,9 +53,9 @@ public class SpartanRoleBasedAccessControlNegativeTest_Reuse {
                               build();
 
         //expectHeader second argument expect a Matcher<String>
-        // but notNullValue() return a Matcher<Object> so it did not compile
-        // so we used the second version of notNullValue( The Matcher type inside <>)
-        // to specify what kind of matcher we wanted
+        //        // but notNullValue() return a Matcher<Object> so it did not compile
+        //        // so we used the second version of notNullValue( The Matcher type inside <>)
+        //        // to specify what kind of matcher we wanted
 
 
         given().
@@ -70,10 +66,13 @@ public class SpartanRoleBasedAccessControlNegativeTest_Reuse {
               spec(responseSpec);
 
 
-
-
     }
 
+    @AfterAll
+    public static void tearDown(){
+
+        RestAssured.reset();
+    }
 
 
 

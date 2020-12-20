@@ -26,7 +26,6 @@ public class SecureSpartanTest {
                                     //23.23.75.140
 
 
-
     //add BeforeAll and use spartanApp with basic auth
    @BeforeAll
    public static void setUp(){

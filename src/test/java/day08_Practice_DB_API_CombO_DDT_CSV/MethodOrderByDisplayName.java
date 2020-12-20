@@ -12,7 +12,6 @@ import org.junit.jupiter.api.TestMethodOrder;
 @TestMethodOrder(MethodOrderer.DisplayName.class)
 public class MethodOrderByDisplayName {
 
-
     @DisplayName("A. Test this first")
     @Test
     public void test1(){

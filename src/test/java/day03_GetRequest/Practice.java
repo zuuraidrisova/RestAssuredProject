@@ -19,6 +19,7 @@ public class Practice {
         RestAssured.basePath = "/api";
     }
 
+
     @DisplayName("simple test")
     @Test
     public void test1(){

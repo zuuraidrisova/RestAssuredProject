@@ -18,7 +18,7 @@ public class newsAPITest {
     @BeforeAll
     public static void setUp(){
 
-        RestAssured.baseURI = "http://newsapi.org";
+        RestAssured.baseURI = "https://newsapi.org";
         RestAssured.basePath = "/v2";
 
     }

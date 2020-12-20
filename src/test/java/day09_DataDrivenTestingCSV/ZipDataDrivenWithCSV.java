@@ -39,10 +39,9 @@ public class ZipDataDrivenWithCSV {
 
         //assert state, city
 
-
         JsonPath jsonPath = response.jsonPath();
 
-        // why do we use single quote? because there can not be a space in json path
+        // why do we use single quote? because there cannot be a space in json path
         // we are using the '' to treat the 2 word as one
 
         String actualState = jsonPath.getString(" 'state abbreviation' ");
@@ -59,7 +58,7 @@ public class ZipDataDrivenWithCSV {
 
         assertThat(expectedCity, is(actualCity));
 
-        // now we want to count how many item in jsonArray from the respons e
+        // now we want to count how many item in jsonArray from the response
         // and validate that against our csv file expected numbers
         // since post code key has space in between we have to add '' to treat it as one
 
@@ -71,7 +70,7 @@ public class ZipDataDrivenWithCSV {
 
         // OPTIONALLY YOU MAY DO AS BELOW TO COUNT YOUR JSON ARRAY
         // if your jsonpath is pointing to an jsonArray you can count them
-        // by called groovy method called size()
+        // by calling groovy method called size()
         System.out.println("calling the size method directly in json = " + jsonPath.getInt("places.size()"));
 
 

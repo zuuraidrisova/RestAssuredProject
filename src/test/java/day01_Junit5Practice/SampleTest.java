@@ -27,7 +27,6 @@ public class SampleTest {
     }
 
     //u can add the display name for ur test instead of method name
-
     @DisplayName("I am testing the name")
     @Test
     public void nameTest(){
@@ -42,5 +41,6 @@ public class SampleTest {
 
 
     }
+
 
 }

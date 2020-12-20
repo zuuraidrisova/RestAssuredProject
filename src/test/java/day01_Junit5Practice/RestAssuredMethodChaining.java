@@ -40,6 +40,7 @@ public class RestAssuredMethodChaining {
 
 
         System.out.println("Success");
+
     }
 
     @DisplayName("explaining asserting using hamcrest matcher ")
@@ -57,6 +58,7 @@ public class RestAssuredMethodChaining {
                 body(is("Hello from Sparta"));//asserting whether body is Hello from Sparta
 
         System.out.println("Success");
+
     }
 
     @Test

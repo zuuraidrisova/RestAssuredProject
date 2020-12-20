@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Test;
 
 public class WhatIsVarArgs {
 
-
-
     //variable number of arguments
     //create a method that accept N numbers and add all of them
     //and print result
@@ -42,7 +40,7 @@ public class WhatIsVarArgs {
 
         }
 
-        System.out.println("sum = "+sum);
+        System.out.println("sum = " + sum);
     }
 
     @Test
@@ -53,9 +51,6 @@ public class WhatIsVarArgs {
         addAllNumbersVarArgs(1,2,3,4,5,6);
 
     }
-
-
-
 
 
 }

@@ -56,7 +56,6 @@ public class SpartanAPI_CRUD_operationHappyPath {
 
         System.out.println("newID = " + newID);
 
-
         assertThat(response.getStatusCode(), is(201) );
 
         //201 status code is successfully created a data

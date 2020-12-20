@@ -38,7 +38,6 @@ public class PostRequestWithFormAsBody {
         basePath = "/rest/v1";
 
 
-
     }
 
     @DisplayName("test post/login endpoint")
@@ -75,7 +74,7 @@ public class PostRequestWithFormAsBody {
                 contentType(ContentType.URLENC).
                 formParam("email", username ).
                 formParam("password", password).
-                when().
+         when().
                 post("/login");
 
         JsonPath jsonPath = jsonResponse.jsonPath();

@@ -6,6 +6,7 @@ import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -23,9 +24,11 @@ public class SpartanRoleBasedAccessControlNegativeTest_ReuseClassLevel {
 
     /*
     If your application API have lots of repeating part in the request and response
-assertion, you can create a utility class for different type of request spec and response spec,
-to re-use in your tests everywhere and it will make it easy to write and maintain in the long run.
+assertion, you can create a utility class for different type of request spec
+and response spec to re-use in your tests everywhere and it will make
+ it easy to write and maintain in the long run.
      */
+
 
     @BeforeAll
     public static void init(){
@@ -45,7 +48,8 @@ to re-use in your tests everywhere and it will make it easy to write and maintai
         ResponseSpecBuilder responseSpecBuilder = new ResponseSpecBuilder();
 
         // Getting the reusable ResponseSpecification object using the builder methods chaining
-        responseSpec = responseSpecBuilder.expectStatusCode(403).
+        responseSpec = responseSpecBuilder.
+                expectStatusCode(403).
                 expectContentType(ContentType.JSON).
                 expectHeader("Date",notNullValue(String.class) ).
                 log(LogDetail.ALL).
@@ -59,9 +63,9 @@ to re-use in your tests everywhere and it will make it easy to write and maintai
 
         given().
                 spec(requestSpec).
-                when().
+        when().
                 delete("/spartans/{id}",10).
-                then().
+        then().
                 spec(responseSpec);
 
     }
@@ -100,6 +104,12 @@ to re-use in your tests everywhere and it will make it easy to write and maintai
                 spec(responseSpec);
 
 
+    }
+
+    @AfterAll
+    public static void tearDown(){
+
+        RestAssured.reset();
     }
 
 }

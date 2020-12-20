@@ -7,11 +7,12 @@ public class Departments {
 
     /*
     "items": [
-        {
-            "department_id": 10,
+        { "department_id": 10,
             "department_name": "Administration",
-            "manager_id": 200,
+            "manager_id": 200 }
+        ]
      */
+
     private int department_id;
     private String department_name;
     private int manager_id;
@@ -25,7 +26,6 @@ public class Departments {
         this.department_id = department_id;
         this.department_name = department_name;
         this.manager_id = manager_id;
-
 
     }
 
@@ -61,4 +61,5 @@ public class Departments {
                 ", manager_id=" + manager_id +
                 '}';
     }
+
 }

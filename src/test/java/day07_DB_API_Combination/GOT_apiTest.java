@@ -43,6 +43,7 @@ Assert the list size is 76
         for(String each : houseStarkCharacters){
 
             System.out.println(each);
+
         }
 
         assertThat(houseStarkCharacters, hasSize(76));

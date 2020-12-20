@@ -41,8 +41,7 @@ public class PostRequestWithPOJO {
                statusCode(is(201)).
                body("data.name", is(spartan.getName()));
 
-
-
-
     }
+
+
 }

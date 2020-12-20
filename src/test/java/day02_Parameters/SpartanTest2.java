@@ -29,6 +29,7 @@ public class SpartanTest2 {
     public void testingSingleSpartan(){
 
         //i want to log the request i sent so i see what url is, methods and etc
+
         given().
                 log().uri().
         when().
@@ -40,6 +41,7 @@ public class SpartanTest2 {
 
 
     }
+
 
     @DisplayName("Get all Spartans")
     @Test
@@ -92,7 +94,7 @@ public class SpartanTest2 {
         given().
                 accept(ContentType.TEXT). //specifying that you want to get a text result back
         when().
-                get("/hello"). //sending request to aseuri basepath + /hello
+                get("/hello"). //sending request to baseuri basepath + /hello
                 prettyPeek().
         then().
                 statusCode(is(200)).//checking sttaus code is 200

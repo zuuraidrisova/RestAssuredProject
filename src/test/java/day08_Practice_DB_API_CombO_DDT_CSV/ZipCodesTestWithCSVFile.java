@@ -2,6 +2,7 @@ package day08_Practice_DB_API_CombO_DDT_CSV;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -49,4 +50,9 @@ public class ZipCodesTestWithCSVFile {
     }
 
 
+    @AfterAll
+    public static void tearDown(){
+
+       RestAssured.reset();
+    }
 }

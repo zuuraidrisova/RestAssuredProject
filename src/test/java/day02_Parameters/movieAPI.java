@@ -52,10 +52,8 @@ public class movieAPI {
                 body("Ratings[2].Value", is("52/100"));
 
 
-
-
-
     }
+
 
 
 

@@ -40,7 +40,7 @@ public class SpartanSearchExtractSData {
 
         JsonPath jsonPath = response.jsonPath();
 
-       //get the value of numberofElements field from response body
+       //get the value of numberOfElements field from response body
 
         int numberOfElements = jsonPath.getInt("numberOfElements");
 

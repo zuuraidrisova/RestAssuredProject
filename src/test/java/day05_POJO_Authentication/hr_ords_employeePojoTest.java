@@ -43,7 +43,7 @@ public class hr_ords_employeePojoTest {
                         log().all().
                         contentType(ContentType.JSON).
                         pathParam("employee_id", 100).
-                        when().
+                when().
                         get("/employees/{employee_id}");
 
         Employees employees = response.as(Employees.class);

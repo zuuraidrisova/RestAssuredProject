@@ -6,6 +6,7 @@ import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -100,6 +101,12 @@ We want to save the Response spec for
         then().
                 spec(responseSpec);
 
+    }
+
+    @AfterAll
+    public static void tearDown(){
+
+        RestAssured.reset();
 
     }
 

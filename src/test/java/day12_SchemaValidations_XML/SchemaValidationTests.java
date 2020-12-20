@@ -1,6 +1,7 @@
 package day12_SchemaValidations_XML;
 
 import io.restassured.RestAssured;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -22,7 +23,6 @@ Add 2 tests:
 GET /spartans
 GET /spartans/search
 Validate the response against the schema in classpath
-Solution
      */
 
     @BeforeAll
@@ -31,7 +31,6 @@ Solution
 
         baseURI = ConfigurationReader.getProperty("spartan1.base_url");
         RestAssured.basePath = "/api";
-
 
     }
 
@@ -74,17 +73,15 @@ Solution
     what if my schema file is not under resources folder ?
      then matchesJsonSchemaInClasspath  method will not work because
      it only look for schema under resources folder.
-
-
-We have to use matchesJsonSchema method and provide full path
-if file is not under resource folder
+        We have to use matchesJsonSchema method and provide full path
+        if file is not under resource folder
      */
 
     @DisplayName("test Get /spartans against schema using root level json")
     @Test
     public void testAllSpartansJsonSchema2(){
 
-      //  create a File object that point to the schema
+        //create a File object that point to the schema
         //use matchesJsonSchema() method that accepts a file and do ur validation
 
         File file = new File("AllSpartanSchema2.json");
@@ -98,6 +95,12 @@ if file is not under resource folder
                 body(matchesJsonSchema(file));
 
 
+    }
+
+    @AfterAll
+    public static void tearDown(){
+
+        RestAssured.reset();
     }
 
 }

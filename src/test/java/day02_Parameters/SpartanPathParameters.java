@@ -68,7 +68,9 @@ public class SpartanPathParameters {
                 body(("gender"), is(equalTo("Male"))).
                 body("phone",is(74615973451L)).
                 body(containsString("Adam"));
+
     }
+
 
 
 }

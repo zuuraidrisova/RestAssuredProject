@@ -29,15 +29,17 @@
         </plugins>
     </build>
 
-    <!-- add junit 5 dependency -->
+
     <dependencies>
 
+        <!-- add junit 5 dependency -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>5.7.0-M1</version>
         </dependency>
 
+        <!-- this is dependency for  restAssured libraries for api testing -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
@@ -45,28 +47,19 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- this is java faker dependency for generating random fake data -->
         <dependency>
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
             <version>1.0.2</version>
         </dependency>
 
+        <!--this is dependency for converting java objects into json -->
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.11.2</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>com.oracle.ojdbc</groupId>
-            <artifactId>ojdbc8</artifactId>
-            <version>19.3.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.21</version>
         </dependency>
 
         <!--  this is dependency for project lombok to remove boiler plate codes -->
@@ -86,6 +79,20 @@
             <scope>test</scope>
         </dependency>
 
+
+
+        <dependency>
+            <groupId>com.oracle.ojdbc</groupId>
+            <artifactId>ojdbc8</artifactId>
+            <version>19.3.0.0</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.21</version>
+        </dependency>
 
     </dependencies>
 

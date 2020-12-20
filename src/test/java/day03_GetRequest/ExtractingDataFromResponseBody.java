@@ -33,7 +33,6 @@ public class ExtractingDataFromResponseBody {
         response.prettyPrint();
 
 
-
         int actualStatusCode = response.statusCode();
 
         System.out.println("statusCode = " + actualStatusCode);
@@ -41,7 +40,6 @@ public class ExtractingDataFromResponseBody {
         int expectedStatusCode = 200;
 
         Assertions.assertTrue(expectedStatusCode == actualStatusCode);
-
 
 
         String actualTitle = response.path("Title");

@@ -72,7 +72,9 @@ public class LibraryApp_API_DB_test {
     public static void destroy(){
 
         DB_Utility.destroy();
+
         RestAssured.reset(); //this is for resetting all the values  we set for RestAssured itself
+
     }
 
 
