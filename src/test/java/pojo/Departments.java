@@ -17,6 +17,7 @@ public class Departments {
     private String department_name;
     private int manager_id;
 
+
     public Departments(){
 
     }
@@ -28,6 +29,7 @@ public class Departments {
         this.manager_id = manager_id;
 
     }
+
 
     public int getDepartment_id() {
         return department_id;
@@ -53,6 +55,7 @@ public class Departments {
         this.manager_id = manager_id;
     }
 
+
     @Override
     public String toString() {
         return "Departments{" +
@@ -61,5 +64,6 @@ public class Departments {
                 ", manager_id=" + manager_id +
                 '}';
     }
+
 
 }

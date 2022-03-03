@@ -15,10 +15,10 @@ public class SpartanTest {
     @Test
     public void getAllSpartanS(){
 
-        //String url = "http://35.153.51.63:8000/api/spartans";
+        //String url = "http://54.236.150.168:8000/api/spartans";
 
        //how to set base URL , port , base path so i can reuse them
-        RestAssured.baseURI = "http://35.153.51.63:8000";
+        RestAssured.baseURI = "http://54.236.150.168:8000";
         RestAssured.basePath = "/api";
 
         //it will create the request URL as is
@@ -42,9 +42,9 @@ public class SpartanTest {
 
         // send the same request specifying the accept header is application/json
         // use baseuri basepath , check status code 200 , contentType header is json
-        //http://35.153.51.63:8000
+        //http://54.236.150.168:8000
         given().
-                baseUri("http://35.153.51.63:8000").//alternative way of doing it
+                baseUri("http://54.236.150.168:8000").//alternative way of doing it
                 basePath("/api").
                 //accept("application/json").
                 accept(ContentType.JSON).
@@ -56,8 +56,8 @@ public class SpartanTest {
                 contentType(ContentType.JSON);
                 //contentType("application/json;charset=UTF-8")
 
-    }
 
+    }
 
 
 }

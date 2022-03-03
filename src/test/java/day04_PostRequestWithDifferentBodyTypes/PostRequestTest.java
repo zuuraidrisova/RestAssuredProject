@@ -19,7 +19,7 @@ public class PostRequestTest {
     @BeforeAll
     public static void setUp(){
 
-        baseURI = "http://35.153.51.63";
+        baseURI = "http://54.236.150.168";
         port = 8000 ;
         basePath = "/api";
 
@@ -81,7 +81,9 @@ public class PostRequestTest {
                 statusCode(is(201)).
                 body("data.name", is("From File"));
 
+
     }
+
 
 
     @DisplayName("posting with map object as body")

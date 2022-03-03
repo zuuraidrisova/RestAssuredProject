@@ -18,8 +18,8 @@ public class hr_ords_regions_testWithPojo {
 
         /*
           Here is the get request we need to make
-              http://35.153.51.63:1000/ords/hr/regions/1
-              baseURI = http://35.153.51.63
+              http://54.236.150.168:1000/ords/hr/regions/1
+              baseURI = http://54.236.150.168
               port = 1000
               basePath = ords/hr
               request :  GET /regions/{region_id}
@@ -28,7 +28,7 @@ public class hr_ords_regions_testWithPojo {
         @BeforeAll
         public  static  void setUp(){
 
-            baseURI = "http://35.153.51.63";
+            baseURI = "http://54.236.150.168";
             port = 1000;
             basePath = "ords/hr";
 
@@ -56,13 +56,14 @@ public class hr_ords_regions_testWithPojo {
 
         }
 
+
         @DisplayName("testing the /regions endpoint")
         @Test
         public void testRegionJsonArrayToPojoList(){
 
 
-            // send a request to /regions endpoint to get all regions
-            // save the regions json array into pojo List
+            // send a get request to /regions endpoint to get all regions
+            // save the regions from json array into pojo List
             // you already have taken care of unknown properties so no extra action needed
             // just call the method of jsonPath object to get the list you want
 
@@ -80,6 +81,7 @@ public class hr_ords_regions_testWithPojo {
             List<Region> regionList = jsonPath.getList("items", Region.class);
 
             System.out.println("regionList = " + regionList);
+
 
 
         }
@@ -115,7 +117,10 @@ public class hr_ords_regions_testWithPojo {
 
         System.out.println("regionList = " + regionList);
 
+
+
     }
+
 
 
 }

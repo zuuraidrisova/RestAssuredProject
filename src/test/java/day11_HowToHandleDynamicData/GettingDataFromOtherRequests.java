@@ -67,6 +67,7 @@ public class GettingDataFromOtherRequests {
         // then we called getter method getId() from Spartan2 to get the value
 
        int firstSpartanIDFromList =  listOfSpartans.get(0).getId();
+
        String firstSpartanNameFromList  = listOfSpartans.get(0).getName();
 
         System.out.println("firstSpartanIDFromList = " + firstSpartanIDFromList);
@@ -118,6 +119,8 @@ public class GettingDataFromOtherRequests {
                 statusCode(is(200)).
                 body("name", is(randomSpartanObject.getName()));
 
+
+
     }
 
 
@@ -127,9 +130,6 @@ public class GettingDataFromOtherRequests {
 
         RestAssured.reset();
     }
-
-
-
 
 
 

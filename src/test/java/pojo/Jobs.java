@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Jobs {
+
     /*
         {
             "job_id": "AC_ACCOUNT",
@@ -12,6 +13,8 @@ public class Jobs {
             "max_salary": 9000,
             }
      */
+
+
     private String job_id;
     private String job_title;
     private int min_salary;
@@ -21,6 +24,7 @@ public class Jobs {
 
     }
 
+
     public Jobs(String job_id, String job_title, int min_salary, int max_salary){
 
         this.job_id = job_id;
@@ -29,6 +33,7 @@ public class Jobs {
         this.max_salary = max_salary;
 
     }
+
 
     public String getJob_id() {
         return job_id;
@@ -71,4 +76,6 @@ public class Jobs {
                 ", max_salary=" + max_salary +
                 '}';
     }
+
+
 }

@@ -13,18 +13,32 @@ import static org.hamcrest.Matchers.*;
 
 public class LibraryAppTest {
 
-    private static String LibraryToken;
 
+    //posting to library app
+    // body is not json , it's x-www-urlencoded-form-data
+
+    //https://library2.cybertekschool.com/rest/v1/login
+    // baseURI  is https://library2.cybertekschool.com
+    // basePath is /rest/v1
+    // we are working on POST /login
+
+    // Post body , type x-www-urlencoded-form-data
+    //email : librarian123455@library
+    //password : QoyNEHxI
+
+    private static String LibraryToken;
 
 
     @BeforeAll
     public static void setUp(){
 
-        RestAssured.baseURI = "http://library1.cybertekschool.com";
+        RestAssured.baseURI = "https://library2.cybertekschool.com";
         RestAssured.basePath = "/rest/v1";
-        LibraryToken = loginAndGetToken("librarian69@library","KNPXrm3S");
+
+        LibraryToken = loginAndGetToken("librarian123455@library","QoyNEHxI");
 
     }
+
 
     @DisplayName("Send a request to /DashboardStat")
     @Test
@@ -38,9 +52,9 @@ public class LibraryAppTest {
         then().
                 log().all().
                 statusCode(is(200)).
-                body("book_count", is("985")).
-                body("borrowed_books", is("601")).
-                body("users", is("5042"));
+                body("book_count", is("23459")).
+                body("borrowed_books", is("4453")).
+                body("users", is("7396"));
 
     }
 
@@ -63,16 +77,18 @@ public class LibraryAppTest {
         then().
                 log().all().
                 statusCode(is(200)).
-                body("email", is("librarian69@library")).
+                body("email", is("librarian123455@library")).
                 body("token", is(LibraryToken));
 
 
 
     }
 
-    @DisplayName("Test /Get user by id endpoint")
+
+
+    @DisplayName("Test /get_user_by_id/2080 endpoint")
     @Test
-    public void testSingleUserDate(){
+    public void testGetUserByIDEndpoint(){
 
         given().
                 log().all().
@@ -82,17 +98,20 @@ public class LibraryAppTest {
         when().
                 get("/get_user_by_id/{id}").
         then().
+                log().all().
                 statusCode(is(200)).
-                body("id", equalTo("2080")).
-                body("full_name", is("Test Student 142")).
+                body("id",is("2080")).
+                body("full_name", is("dfasdf")).
+                body("email", equalTo("fasf@fa.com")).
+                body("password", is("c7d48bbf2b960adc10b0aba11bf336a5")).
                 body("user_group_id", is("3")).
-                body("status", equalTo("ACTIVE")).
+                body("image", is(nullValue())).
+                body("extra_data", is(nullValue())).
+                body("status", is("ACTIVE")).
                 body("is_admin", is("0")).
-                body("start_date", is("2020-06-22")).
-                body("end_date", is("2021-06-22")).
-                body("address", is("Test address 142")).
-                body("image",  is(nullValue()));
-
+                body("start_date", is("2020-11-06")).
+                body("end_date", is("2020-12-06")).
+                body("address", equalTo("afafasdfdasa"));
 
     }
 
@@ -105,18 +124,23 @@ public class LibraryAppTest {
      */
     public static String loginAndGetToken(String username, String password){
 
-        Response jsonResponse  = given().
+        Response jsonResponse  =
+
+        given().
+
                 contentType(ContentType.URLENC).
                 formParam("email", username ).
                 formParam("password", password).
          when().
                 post("/login");
 
+
         JsonPath jsonPath = jsonResponse.jsonPath();
 
         String token = jsonPath.getString("token");
 
         return  token;
+
     }
 
 

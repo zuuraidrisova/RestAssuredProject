@@ -22,6 +22,7 @@ public class PostRequestExample {
 
     }
 
+
     @DisplayName("testing the POST endpoint in spartan api")
     @Test
     public void testAddSpartan(){
@@ -31,6 +32,7 @@ public class PostRequestExample {
                 "            \"gender\": \"Female\",\n" +
                 "            \"phone\": 2189634842\n" +
                 "        }";
+
 
         System.out.println("myBodyData = " + myBodyData);
 
@@ -46,7 +48,7 @@ public class PostRequestExample {
                 statusCode(is(201)).
                 contentType(ContentType.JSON).
                 body("success", is("A Spartan is Born!")).
-                body("data.id", equalTo(195)).
+               // body("data.id", equalTo(3656)).
                 body("data.name", equalTo("Aika"));
                 //body("data.phone", is("2189634842"));
 
@@ -70,6 +72,7 @@ public class PostRequestExample {
                 "            \"phone\": 2189634942\n" +
                 "        }";
 
+
         Response response =
 
 
@@ -83,8 +86,8 @@ public class PostRequestExample {
 
 
         System.out.println("id using path = " + response.path("data.id"));
-        System.out.println("name using path  = " + response.path("data.name"));
 
+        System.out.println("name using path  = " + response.path("data.name"));
 
         JsonPath jsonPath =  response.jsonPath();
 
@@ -95,6 +98,7 @@ public class PostRequestExample {
         String name = jsonPath.getString("data.name");
 
         System.out.println("name using json path  = " + name);
+
 
     }
 

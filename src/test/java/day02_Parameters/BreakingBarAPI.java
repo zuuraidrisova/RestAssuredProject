@@ -7,9 +7,11 @@ import static org.hamcrest.Matchers.*;
 
 public class BreakingBarAPI {
 
+
     @DisplayName("Get all characters from BreakingBad")
     @Test
     public void testBreakingBad() {
+
         //https://www.breakingbadapi.com/api/characters
 
         when().

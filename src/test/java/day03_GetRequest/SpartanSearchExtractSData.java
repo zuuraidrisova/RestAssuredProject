@@ -22,6 +22,7 @@ public class SpartanSearchExtractSData {
 
     }
 
+
     @DisplayName("extracting data from spartan api search endpoint")
     @Test
     public void testExtractingDataSearch(){
@@ -40,11 +41,11 @@ public class SpartanSearchExtractSData {
 
         JsonPath jsonPath = response.jsonPath();
 
-       //get the value of numberOfElements field from response body
+       //get the value of totalElement field from response body
 
-        int numberOfElements = jsonPath.getInt("numberOfElements");
+        int totalElement = jsonPath.getInt("totalElement");
 
-        System.out.println("numberOfElements = " + numberOfElements);
+        System.out.println("totalElement = " + totalElement);
 
         List<Integer> spartanIDs = jsonPath.getList("content.id");
 
@@ -53,6 +54,8 @@ public class SpartanSearchExtractSData {
         List<String> spartanNames = jsonPath.getList("content.name");
 
         System.out.println("spartanNames = " + spartanNames);
+
+
     }
 
 

@@ -70,6 +70,7 @@
             <version>1.18.12</version>
         </dependency>
 
+
         <!--  this is dependency for json schema validation to check json format -->
 
         <dependency>
@@ -81,12 +82,12 @@
 
 
 
+
         <dependency>
             <groupId>com.oracle.ojdbc</groupId>
             <artifactId>ojdbc8</artifactId>
             <version>19.3.0.0</version>
         </dependency>
-
 
         <dependency>
             <groupId>mysql</groupId>

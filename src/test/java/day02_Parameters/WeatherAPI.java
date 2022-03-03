@@ -37,6 +37,7 @@ public class WeatherAPI {
          then().
                 statusCode(is(200)).
                 log().all();
+
     }
 
 

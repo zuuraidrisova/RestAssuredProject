@@ -17,9 +17,11 @@ public class ReadingCSVFileFromTheTest {
     public void simpleRead(int num1, int num2){
 
         System.out.println("num1 = " + num1);
+
         System.out.println("num2 = " + num2);
 
     }
+
 
 
 
@@ -44,6 +46,7 @@ public class ReadingCSVFileFromTheTest {
         assertThat(num1 + num2, equalTo(additionResult));
 
     }
+
 
     //what if i want some custom name
                 //@ParameterizedTest(name = "some custom name here")
@@ -70,8 +73,6 @@ public class ReadingCSVFileFromTheTest {
         assertThat(num1 + num2, equalTo(result));
 
     }
-
-
 
 
 

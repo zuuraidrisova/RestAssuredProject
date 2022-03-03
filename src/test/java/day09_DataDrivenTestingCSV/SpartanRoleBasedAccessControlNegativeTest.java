@@ -38,9 +38,10 @@ public class SpartanRoleBasedAccessControlNegativeTest {
         //we are using Akbar's ip address because it is with basic auth,
         // and my ip is with no auth, so i will not be able to complete the test with my own
 
-        RestAssured.baseURI = "http://54.160.106.84";
+        RestAssured.baseURI = "http://54.236.150.168";
         RestAssured.port = 8000;
         RestAssured.basePath = "/api";
+
     }
 
     @DisplayName("User should not be able to delete data")
@@ -52,7 +53,7 @@ public class SpartanRoleBasedAccessControlNegativeTest {
                 accept(ContentType.JSON). //we want json result back
                 log().all().
         when().
-                delete("/spartans/{id}", 10).
+                delete("/spartans/{id}", 950).
         then().
                 log().all().
                 statusCode(is(403)).
@@ -60,9 +61,9 @@ public class SpartanRoleBasedAccessControlNegativeTest {
                 header("Date", is(notNullValue())); //checking the date header is not null
 
 
-
-
     }
+
+
 
     @DisplayName("User should not be able to update data")
     @Test
@@ -76,7 +77,7 @@ public class SpartanRoleBasedAccessControlNegativeTest {
                 body(spartan).
                 log().all().
         when().
-                put("/spartans/{id}",10).
+                put("/spartans/{id}",950).
          then().
                 log().all().
                 statusCode(is(403)).
@@ -86,6 +87,7 @@ public class SpartanRoleBasedAccessControlNegativeTest {
 
 
     }
+
 
     @DisplayName("User should not be able to post data")
     @Test
@@ -109,6 +111,7 @@ public class SpartanRoleBasedAccessControlNegativeTest {
 
 
     }
+
 
 
 }

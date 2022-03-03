@@ -35,9 +35,8 @@ public class SpartanAPI_DB_Practice {
     @BeforeAll
     public static void setUp(){
 
-        //35.153.51.63
-        RestAssured.baseURI = "http://35.153.51.63";
-        RestAssured.port = 8000;
+        //54.236.150.168
+        RestAssured.baseURI = ConfigurationReader.getProperty("spartan1.base_url");
         RestAssured.basePath = "/api";
 
        DB_Utility.createConnection(ConfigurationReader.getProperty("spartan1.database.url"),
@@ -60,6 +59,7 @@ public class SpartanAPI_DB_Practice {
                 " and LOWER(name) LIKE '%a%' ";
 
         DB_Utility.runQuery(query);
+
         DB_Utility.displayAllData();
 
         int expectedResult = DB_Utility.getRowCount();
@@ -86,9 +86,10 @@ public class SpartanAPI_DB_Practice {
                 prettyPeek();
 
 
-        int actualNumberOfElements = response.jsonPath().getInt("numberOfElements");
+        int actualNumberOfElements = response.jsonPath().getInt("totalElement");
 
         System.out.println("actual numberOfElements = " + actualNumberOfElements);
+
 
 
         //run this query so we can use it for expected result
@@ -104,9 +105,10 @@ public class SpartanAPI_DB_Practice {
 
         //this is using junit assertion
         Assertions.assertEquals(actualNumberOfElements, expectedResult);
+
     }
 
-    @DisplayName("testing /spartans/search endpoint and validate againt DB for all IDs")
+    @DisplayName("Testing spartans/search endpoint and validate against DB")
     @Test
     public void testSearchVerifyAllIDs(){
 
@@ -142,7 +144,6 @@ public class SpartanAPI_DB_Practice {
         assertThat(idListFromResponse.size(), equalTo(idListFromDB.size()));
 
 
-
     }
 
 
@@ -153,5 +154,6 @@ public class SpartanAPI_DB_Practice {
         DB_Utility.destroy();
 
     }
+
 
 }

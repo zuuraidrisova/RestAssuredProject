@@ -10,8 +10,9 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import static io.restassured.RestAssured.*;
 
 public class ZipCodesTestWithCSVFile {
+
     /*
-    --- Data Drive your GET / api.zippopotam.us/us/:state/:city
+    --- Data Drive your GET / http://api.zippopotam.us/us/:state/:city
     --- Create a csv file called state_city.csv
         add 3 column  state , city , numberOfZipcodes
                       VA ,  Fairfax , 9(send the request and prepare this number)
@@ -35,18 +36,19 @@ public class ZipCodesTestWithCSVFile {
 
         Response response =
 
-
         given().
                 pathParam("state", state).
                 pathParam("city",city).
         when().
                 get("/{state}/{city}");
 
+
         //state/:city
 
         String place =  response.jsonPath().getString("places[0].'place name'");
 
         System.out.println("place = " + place);
+
     }
 
 
@@ -54,5 +56,9 @@ public class ZipCodesTestWithCSVFile {
     public static void tearDown(){
 
        RestAssured.reset();
+
     }
+
+
+
 }

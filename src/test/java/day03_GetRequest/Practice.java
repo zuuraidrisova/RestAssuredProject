@@ -10,11 +10,13 @@ import static org.hamcrest.Matchers.*;
 
 public class Practice {
 
+    //http://54.236.150.168:8000/api/spartans
+
 
     @BeforeAll //static method
     public static void init(){
 
-        RestAssured.baseURI = "http://35.153.51.63";
+        RestAssured.baseURI = "http://54.236.150.168";
         RestAssured.port = 8000;
         RestAssured.basePath = "/api";
     }
@@ -31,6 +33,8 @@ public class Practice {
                 get("/spartans/search").
         then().
                 statusCode(is(200));
+
+
     }
 
 

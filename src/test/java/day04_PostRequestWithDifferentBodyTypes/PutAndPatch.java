@@ -20,7 +20,7 @@ public class PutAndPatch {
     @BeforeAll
     public static void setUp(){
 
-        baseURI  = "http://35.153.51.63";
+        baseURI  = "http://54.236.150.168";
         port = 8000;
         basePath = "/api";
 
@@ -30,7 +30,7 @@ public class PutAndPatch {
     @Test
     public void testPutRequestWithMap(){
 
-        //put request to update spartan with id 210
+        //put request to update spartan with id 3567
         //name: put with map, gender :Male, phone; 7283519231
         //check status code is 204
 
@@ -55,7 +55,7 @@ public class PutAndPatch {
                 body(updatedBody).// this is how we do it with the map
 
         when().
-                put("/spartans/210").
+                put("/spartans/3567").
                 //put("/spartans/{id}", 210).
 
         then().
@@ -66,7 +66,7 @@ public class PutAndPatch {
         //  MAKING ANOTHER GET REQUEST TO MAKE SURE IT WORKED !!!!!
 
         when()
-                .get("/spartans/{id}",210).
+                .get("/spartans/{id}",3567).
         then()
                 .statusCode(200)
                 .body("name" , is(randomName) )
@@ -105,7 +105,7 @@ public class PutAndPatch {
                 contentType(ContentType.JSON).
                 body(spartan).
         when().
-                put("/spartans/{id}", 210).
+                put("/spartans/{id}", 3567).
 
         then().
                 log().all().
@@ -115,16 +115,17 @@ public class PutAndPatch {
         //  MAKING ANOTHER GET REQUEST TO MAKE SURE IT WORKED !!!!!
 
         when()
-                .get("/spartans/{id}",210).
+                .get("/spartans/{id}",3567).
         then()
                 .statusCode(200)
                 .body("name" , is(randomName ) )
         ;
 
+
     }
 
 
-    @DisplayName("PATCH request")
+    @DisplayName("testing PATCH request with map as body")
     @Test
     public void testPatchRequestPartialRequest(){
 
@@ -143,7 +144,7 @@ public class PutAndPatch {
                 contentType(ContentType.JSON).
                 body(patchBodyMap).
         when().
-                patch("/spartans/{id}", 210).
+                patch("/spartans/{id}", 3567).
         then().
                 log().all().
                 statusCode(is(204));
@@ -152,7 +153,7 @@ public class PutAndPatch {
         //add one qet request to make sure it updated just name partially
 
         when().
-                get("/spartans/{id}", 210).
+                get("/spartans/{id}", 3567).
         then().
                 statusCode(200).
                 body("name" , is(randomName ) );
@@ -161,6 +162,7 @@ public class PutAndPatch {
 
 
     }
+
 
 
 }

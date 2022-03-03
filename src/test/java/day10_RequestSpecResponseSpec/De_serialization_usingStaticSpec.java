@@ -33,6 +33,7 @@ hint : you will need to create 2 POJO class called Category , User;
 
     static String libraryToken;
 
+
     @BeforeAll
     public static void setUp(){
 
@@ -50,13 +51,16 @@ hint : you will need to create 2 POJO class called Category , User;
                 log().all().
                 header("x-library-token", libraryToken);
 
+
         //ResponseSpecBuilder responseSpecBuilder = new ResponseSpecBuilder();
         //is there easy way of building responsesPEC OBJECT WITHOUT BUILDER? yes, BELOW
 
         RestAssured.responseSpecification =  expect().statusCode(is(200)).
                 contentType(ContentType.JSON).
                 logDetail(LogDetail.ALL);
+
     }
+
 
     //get the List<Category> object from the response of GET /get_book_categories
 
@@ -89,6 +93,7 @@ hint : you will need to create 2 POJO class called Category , User;
 
     }
 
+
     //get the List<User> object from the response of GET /get_all_users
 
     @DisplayName("testing get_all_users Endpoint with Spec")
@@ -105,6 +110,8 @@ hint : you will need to create 2 POJO class called Category , User;
         List<Users> listOfUsers = jsonPath.getList("", Users.class);
 
         System.out.println("listOfUsers = " + listOfUsers);
+
+
     }
 
     //get the Map<String,Integer> object out of the response of GET /dashboard_stats
@@ -125,6 +132,7 @@ hint : you will need to create 2 POJO class called Category , User;
         System.out.println("dashBoardStats = " + dashBoardStats);
 
     }
+
 
 
     @AfterAll

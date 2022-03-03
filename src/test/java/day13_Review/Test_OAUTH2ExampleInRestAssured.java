@@ -40,13 +40,16 @@ public class Test_OAUTH2ExampleInRestAssured {
                 get("/sign");
 
 
+
         JsonPath jsonPath = response.jsonPath();
+
 
         String token = jsonPath.getString("accessToken");
 
 
         System.out.println("token = " + token);
 
+        //send get request to get rooms by adding oauth2
 
         given().
                 auth().oauth2(token). //can be done as below too
@@ -56,5 +59,6 @@ public class Test_OAUTH2ExampleInRestAssured {
 
 
     }
+
 
 }

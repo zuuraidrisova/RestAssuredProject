@@ -73,7 +73,6 @@ public class ZipDataDrivenWithCSV {
         // by calling groovy method called size()
         System.out.println("calling the size method directly in json = " + jsonPath.getInt("places.size()"));
 
-
     }
 
     @Test
@@ -85,12 +84,14 @@ public class ZipDataDrivenWithCSV {
                         pathParam("state", "VA").
                         pathParam("city", "FairFax").
                         baseUri("http://api.zippopotam.us/us").
-                        when().
+                 when().
                         get("/{state}/{city}");
 
 
         response.then().statusCode(is(200));
 
+
     }
+
 
 }

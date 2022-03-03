@@ -12,7 +12,7 @@ public class SpartanAPI_E2E_HappyPath {
     // it must be static and at class level
     static int newID;
 
-    //we can make our POJO at class level
+    //we can make our POJO at class level as well
 
     //Spartan crud operation happy path ==> crud is create read update and delete
     // all should pass so we say happy path
@@ -30,6 +30,7 @@ public class SpartanAPI_E2E_HappyPath {
         //or u can also query the DB to get ur expected data
     }
 
+
     @Order(2)
     @Test
     public void testReadData(){
@@ -40,15 +41,25 @@ public class SpartanAPI_E2E_HappyPath {
 
     }
 
+
     @Order(3)
     @Test
     public void testUpdateData(){
 
+        //use the newID  that has been generated from post request
+        //create body as map and use as an updatedBody with put request
+        //assert the status code is 204
+
     }
+
 
     @Order(4)
     @Test
     public void testDeleteData(){
+
+        //use the newID  that has been generated from post request
+        //delete data using newID with delete request
+        //assert the status code is 204
 
     }
 

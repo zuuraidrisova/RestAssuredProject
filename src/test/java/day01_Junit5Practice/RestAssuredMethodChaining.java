@@ -30,10 +30,10 @@ public class RestAssuredMethodChaining {
         //Validate something here.
         //this is where assertions start, u can chain multiple assertions using . dot
 
-        //http://54.174.216.245:8000/api/hello
+        //http://54.236.150.168:8000/api/hello
 
         when().
-                get("http://54.174.216.245:8000/api/hello"). //here we are sending request to url
+                get("http://54.236.150.168:8000/api/hello"). //here we are sending request to url
         then().
                 statusCode(200). //asserting status code is 200
                 header("Content-Length","17");//asserting content length is 17
@@ -43,13 +43,13 @@ public class RestAssuredMethodChaining {
 
     }
 
-    @DisplayName("explaining asserting using hamcrest matcher ")
+    @DisplayName("asserting using hamcrest matcher ")
     @Test
     public void testingWithMatcher(){
 
 
         when().
-                get("http://54.174.216.245:8000/api/hello"). //here we are sending request to url
+                get("http://54.236.150.168:8000/api/hello"). //here we are sending request to url
                 prettyPeek().
         then().
                 statusCode(is(200)). //asserting status code is 200
@@ -67,7 +67,7 @@ public class RestAssuredMethodChaining {
         given().//add all ur request specific info like header, query parameter, path var, body here
                 header("Accept", "application/xml").
         when().
-                get("http://35.153.51.63:8000/api/spartans").
+                get("http://54.236.150.168:8000/api/spartans").
                 prettyPeek().
          then().
                 statusCode(200);

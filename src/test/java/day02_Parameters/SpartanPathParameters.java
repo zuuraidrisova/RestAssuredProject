@@ -14,7 +14,7 @@ public class SpartanPathParameters {
     @BeforeAll
     public static void setUp(){
 
-        RestAssured.baseURI = "http://35.153.51.63:8000" ;
+        RestAssured.baseURI = "http://54.236.150.168:8000" ;
         RestAssured.basePath = "/api" ;
 
     }
@@ -26,7 +26,7 @@ public class SpartanPathParameters {
 
         given().
                 log().all().
-                pathParam("id",104).
+                pathParam("id",979).
         when().
                 get("/spartans/{id}").
                 prettyPeek().
@@ -43,12 +43,13 @@ public class SpartanPathParameters {
         given().
                 log().all().
         when().
-                get("/spartans/{id}" , 197).
+                get("/spartans/{id}" , 979).
         then().
                 statusCode(is(200));
 
 
     }
+
 
     @DisplayName("testing /spartans/{id} body")
     @Test
@@ -56,18 +57,18 @@ public class SpartanPathParameters {
 
         given().
                 log().all().
-                pathParam("id", 197).
+                pathParam("id", 979).
         when().
                 get("/spartans/{id}").
         then().
                 log().all().
                 statusCode(equalTo(200)).
                 //body("JSON PATH", is("VALUE"))
-                body("id",is(197)).
-                body("name", equalTo("Adam")).
+                body("id",is(979)).
+                body("name", equalTo("Elsie")).
                 body(("gender"), is(equalTo("Male"))).
-                body("phone",is(74615973451L)).
-                body(containsString("Adam"));
+                body("phone",is(1604036455)).
+                body(containsString("Elsie"));
 
     }
 

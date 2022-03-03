@@ -93,6 +93,7 @@ public class GettingTestDataFromSpartanDB {
         // now we will try it out.
 
             //  .body("phone.toLong()", is(phoneFromDB) ) ;
+
     }
 
 
@@ -118,7 +119,9 @@ public class GettingTestDataFromSpartanDB {
 
 
         System.out.println("randomRowNum = " + randomRowNum);
+
         System.out.println("randomRowMap = " + randomRowMap);
+
 
     }
 

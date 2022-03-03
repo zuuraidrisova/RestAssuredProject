@@ -9,6 +9,7 @@ import static org.hamcrest.Matchers.*;
 
 public class OpenDBMovie_XML {
 
+
     //http://www.omdbapi.com/?t=Boss Baby&r=xml
     //apikey is 26aa5b74
 
@@ -36,6 +37,7 @@ public class OpenDBMovie_XML {
                 body("root.movie.@released", is("31 Mar 2017"));
 
     }
+
 
     @AfterAll
     public static void tearDown(){

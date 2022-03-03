@@ -6,6 +6,7 @@ import java.util.Date;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Employees {
+
     /*
             "employee_id": 100,
             "first_name": "Steven",

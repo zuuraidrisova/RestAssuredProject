@@ -17,7 +17,7 @@ public class FirstRequest {
 
     // you may use your own IP
     // we are using spartan app that does not require password
-    //http://54.174.216.245:8000/api/hello
+    //http://54.236.150.168:8000/api/hello
 
     @Test
     public void test1(){
@@ -28,7 +28,8 @@ public class FirstRequest {
         // after we send the request
         // we can save the result in to a type called Response
         // need this  import io.restassured.response.Response;
-        Response response = get("http://54.174.216.245:8000/api/hello") ;
+
+        Response response = get("http://54.236.150.168:8000/api/hello") ;
 
         //Response object stores all info about response we got like: status code, body, header
         //getting status code from response object
@@ -58,19 +59,18 @@ public class FirstRequest {
         System.out.println("Success");
 
 
-
     }
 
     @DisplayName("Testing hello endpoint")
     @Test
     public void testHello(){
 
-        Response response = get("http://54.174.216.245:8000/api/hello") ;
+        Response response = get("http://54.236.150.168:8000/api/hello") ;
 
         //testing the status code returns as expected
         assertEquals(200, response.getStatusCode());
 
-        //testing content type  header value is:  "text/plain"
+        //testing content type  header value contains:  "text/plain"
         assertTrue(response.getContentType().contains("text/plain"));
 
         //testing content-length is 17
@@ -85,7 +85,7 @@ public class FirstRequest {
     @Test
     public void testingHelloBody(){
 
-        Response response = get("http://54.174.216.245:8000/api/hello");
+        Response response = get("http://54.236.150.168:8000/api/hello");
 
         //getting the body by calling body method
         System.out.println("response.getBody() = " + response.getBody().asString());
@@ -104,6 +104,7 @@ public class FirstRequest {
         assertEquals(17, actualBody.length());
 
         System.out.println("Success");
+
     }
 
 
@@ -111,13 +112,14 @@ public class FirstRequest {
     @Test
     public void printBody(){
 
-        Response response = get("http://54.174.216.245:8000/api/hello");
+        Response response = get("http://54.236.150.168:8000/api/hello");
 
         //easy way to print the response body and return at the same time
         //return type is String, prints only body
         String body = response.prettyPrint();
 
         int expectedLengthBody = 17;
+
         int actualLengthBody = body.length();
 
         assertEquals(expectedLengthBody, actualLengthBody);

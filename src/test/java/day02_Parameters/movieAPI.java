@@ -11,9 +11,9 @@ import static org.hamcrest.Matchers.*;
 public class movieAPI {
 
     /*
-    // make a request
+    // make a request to http://www.omdbapi.com
 	      by adding few query parameters like
-	      apikey =  6acf8091
+	      apikey =  26aa5b74
 	      t =  the movie you want to search
 	      plot =  full
 	      then status code 200
@@ -32,12 +32,13 @@ public class movieAPI {
 
     }
 
+
     @DisplayName("testing movie API with query params")
     @Test
     public void testQueryParam(){
 
         given().
-                queryParam("apikey","6acf8091").
+                queryParam("apikey","26aa5b74").
                 queryParam("t", "The next three days").
                 queryParam("plot", "full" ).
                 log().all().
@@ -48,13 +49,11 @@ public class movieAPI {
                 contentType(ContentType.JSON).
                 body("Title",is("The Next Three Days")).
                 body("Year", equalTo("2010")).
-                body("Ratings[0].Value", is("7.4/10")).
+                body("Ratings[0].Value", is("7.3/10")).
                 body("Ratings[2].Value", is("52/100"));
 
 
     }
-
-
 
 
 

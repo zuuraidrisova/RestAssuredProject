@@ -57,6 +57,7 @@ public class ZipCodeAPI {
     }
 
 
+
     @DisplayName("testing city to zip")
     @Test
     public void testCityToZip(){
@@ -75,6 +76,7 @@ public class ZipCodeAPI {
                 body(" 'country abbreviation' ", is("US")).
                 body("places[0].latitude", equalTo("38.8458")).
                 body("places[-1].latitude", equalTo("38.7602"));
+
 
 
     }

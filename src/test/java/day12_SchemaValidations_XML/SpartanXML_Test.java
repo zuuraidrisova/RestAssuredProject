@@ -51,9 +51,9 @@ Verify the first spartan name, id , gender .
                 //log().all().
                 statusCode(is(200)).
                 contentType(ContentType.XML).
-                body("List.item[0].id", is("104")).
-                body("List.item[0].name", is("Swagger")).
-                body("List.item[0].gender", is("Male"));
+                body("List.item[0].id", is("920")).
+                body("List.item[0].name", is("Nisha")).
+                body("List.item[0].gender", is("Female"));
 
 
 
@@ -97,9 +97,9 @@ Verify the first spartan name, id , gender .
         System.out.println("listOfIds = " + listOfIds);
 
 
-        assertThat(listOfIds, hasSize(231));
+        assertThat(listOfIds, hasSize(2012));
 
-        assertThat(listOfIds, hasItems(19, 104, 238));
+       // assertThat(listOfIds, hasItems(19, 104, 238));
 
 
         // Get a List of Long from the phone numbers
@@ -110,9 +110,9 @@ Verify the first spartan name, id , gender .
 
         System.out.println("listOfPhones = " + listOfPhones);
 
-        assertThat(listOfPhones, hasSize(231));
+        assertThat(listOfPhones, hasSize(2012));
 
-        assertThat(listOfPhones, hasItems(28396173292l,7685940321l,3456789021l));
+        assertThat(listOfPhones, hasItems(1231231231l,1876543210l,5555555555l));
 
         // optionally --
         // check every item is greaterThan 1000000000
@@ -143,6 +143,7 @@ Verify the first spartan name, id , gender .
 
         System.out.println("listOfNames.size() = " + listOfNames.size());
 
+
     }
 
 
@@ -150,6 +151,7 @@ Verify the first spartan name, id , gender .
     public static void tearDown(){
 
         RestAssured.reset();
+
     }
 
 

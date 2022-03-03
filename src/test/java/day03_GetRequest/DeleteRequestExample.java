@@ -24,9 +24,10 @@ public class DeleteRequestExample {
     public void testDelete(){
 
         when().
-                delete("/spartans/{id}", 101).
+                delete("/spartans/{id}", 931).
         then().
                 statusCode(is(204));
 
     }
+
 }

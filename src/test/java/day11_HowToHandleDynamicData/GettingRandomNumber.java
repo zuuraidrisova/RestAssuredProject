@@ -38,6 +38,7 @@ public class GettingRandomNumber {
         System.out.println("Lucky name = " + names.get(randomNumber));
 
 
+
     }
 
 

@@ -29,11 +29,12 @@ Provide cookie  with this request : https://postman-echo.com/cookies
                 contentType(ContentType.JSON).
                 cookie("B18", "Awesome").
                 cookie("Moto", "HakunaMatata").
-                when().
+         when().
                 get("/cookies").
                 prettyPeek().
-                then().
+         then().
                 statusCode(200);
+
     }
 
     @AfterAll
@@ -42,4 +43,6 @@ Provide cookie  with this request : https://postman-echo.com/cookies
         RestAssured.reset();
 
     }
+
+
 }

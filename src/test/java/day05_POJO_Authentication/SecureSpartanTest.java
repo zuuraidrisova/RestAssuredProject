@@ -21,16 +21,14 @@ public class SecureSpartanTest {
 
     //we dont use our own ip in this one because our ip is with no auth
     //we use one of followings because they are with basic auth :
-                                    // 54.160.106.84
-                                     //100.24.235.129
-                                    //23.23.75.140
+
 
 
     //add BeforeAll and use spartanApp with basic auth
    @BeforeAll
    public static void setUp(){
 
-       baseURI = "http://54.160.106.84";
+       baseURI = "http://54.236.150.168";
        port = 8000;
        basePath = "/api";
 
@@ -42,16 +40,16 @@ public class SecureSpartanTest {
     //401 Unauthorized
     @DisplayName("testing get spartans/{id} endpoint with no credentials")
     @Test
-    public void testGetSingleSpartanRequestSecured(){
+    public void testGetSingleSpartanRequest(){
 
        given().
                log().all().
-               pathParam("id", 174).
+               pathParam("id", 3657).
        when().
                get("/spartans/{id}").
        then().
                log().all().
-               statusCode(is(401));
+               statusCode(is(200));
 
 
     }
@@ -76,6 +74,7 @@ public class SecureSpartanTest {
 
     }
 
+
     public static int createRandomSpartan(){
 
         Faker faker = new Faker();
@@ -84,8 +83,10 @@ public class SecureSpartanTest {
         String gender = faker.demographic().sex();
         long phone = faker.number().numberBetween(1000000000l, 9999999999l);
 
+
         //pojo
         Spartan spartan = new Spartan(name, gender, phone);
+
 
         Response response = given().
                                 log().all().
@@ -94,17 +95,13 @@ public class SecureSpartanTest {
                                   body(spartan).
                             when().
                                   post("/spartans").
-                                    prettyPeek();
+                                  prettyPeek();
 
 
        return response.path("data.id");
 
+
     }
-
-
-
-
-
 
 
 

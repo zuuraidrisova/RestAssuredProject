@@ -4,12 +4,13 @@ import org.junit.jupiter.api.*;
 
 public class BeforeAfterJunit5 {
 
+
    //beforeAll method run only once before entire test same as @BeforeClass
     //these are junit5 specific annotations
    @BeforeAll
    public static  void setUp(){
 
-        System.out.println("This runs before all!");
+        System.out.println("This runs once before all!");
     }
 
 
@@ -43,7 +44,8 @@ public class BeforeAfterJunit5 {
     @AfterAll
     public static void tearDown(){
 
-        System.out.println("This runs all the way at the end!");
+        System.out.println("This runs once all the way at the end!");
+
     }
 
 }

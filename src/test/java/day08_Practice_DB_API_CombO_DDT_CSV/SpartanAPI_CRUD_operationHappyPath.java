@@ -23,7 +23,7 @@ public class SpartanAPI_CRUD_operationHappyPath {
     @BeforeAll
     public static void setUp(){
 
-        RestAssured.baseURI = "http://35.153.51.63";
+        RestAssured.baseURI = "http://54.236.150.168";
         RestAssured.port = 8000;
         RestAssured.basePath = "/api";
 
@@ -59,6 +59,7 @@ public class SpartanAPI_CRUD_operationHappyPath {
         assertThat(response.getStatusCode(), is(201) );
 
         //201 status code is successfully created a data
+
     }
 
 
@@ -130,4 +131,11 @@ public class SpartanAPI_CRUD_operationHappyPath {
 
 
 
+
+
+    @AfterAll
+    public static  void teardown(){
+
+        RestAssured.reset();
+    }
 }

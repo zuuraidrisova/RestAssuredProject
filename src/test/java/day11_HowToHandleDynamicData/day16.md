@@ -1,20 +1,29 @@
 Day 16 (Day 11 of RestAssured)
+
 Warm Up Task :
 
-Getting the dymanic data from different request for the test.(No DB Access situation) We want to test 1.
+Getting the dynamic data from different request for the test.
+(No DB Access situation) We want to test 1.
 
 JSON SCHEMA VALIDATION
+
 {
     "id": 1,
     "name": "Florrie",
     "gender": "Male",
     "phone": 3031618834
 }
-We have tested the body , status code , headers But now , How do I make sure the response json : have the correct structure as defined?
 
-for example : it only has the 4 fields as displayed above the data type for the value match and the value match certain criteria like (2-15 chars..)
+We have tested the body , status code , headers 
+But now , How do I make sure the response json :
+ have the correct structure as defined?
 
-JsonSchema is a documentation in json format to specify the structure of a json string match certian rules or criteria.
+for example : it only has the 4 fields as displayed above, 
+the data type for the value matches and the value matches certain criteria 
+like (2-15 chars..)
+
+JsonSchema is a documentation in json format to specify the structure of 
+a json string match certain rules or criteria.
 
 This is one of the minimalist schema for above json string
 
@@ -42,12 +51,14 @@ This is one of the minimalist schema for above json string
     "phone"
   ]
 }
+
 This document is setting the rule for the structure of the json as below
 
 it has to be an object "type": "object"
 it has to have 4 fields|properties id , name,gender,phone
 all properties must have the defined data type as value
-Any of above rule fail , it means it's not a valid json we are looking for. else , it's a valid json. That's exactly what Json Schema Validaiton is.
+Any of above rule fail , it means it's not a valid json we are looking for. 
+else , it's a valid json. That's exactly what Json Schema Validation is.
 
 This is free online site we used to validate our json.
 
@@ -106,22 +117,30 @@ This is another schema document with little bit more rules :
     }
   }
 }
-From our end , we will usually get the schema from the developer. src/test/resources
+
+From our end , we will usually get the schema from the developer
+and add it to src/test/resources as .json type of file
 
 Steps :
 
 Add the file called singleSpartan.json under src/test/resources folder.
+
 Add RestAssured JsonSchema validation dependency to your pom file
+
 <dependency>
       <groupId>io.rest-assured</groupId>
       <artifactId>json-schema-validator</artifactId>
       <version>4.3.1</version>
       <scope>test</scope>
 </dependency>
+
 Add below static import
 import static io.restassured.module.jsv.JsonSchemaValidator.*;
-Write your regular restassured assertion under then section add below part..
+
+Write your regular restAssured assertion under then section add below part..
+
 then().body( matchesJsonSchemaInClasspath("singleSpartanSchema.json") )
+
 How to do Json Schema Validation in Postman
 Tiny Validator
 

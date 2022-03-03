@@ -9,8 +9,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-
 import static io.restassured.RestAssured.*;
+
 
 public class newsAPITest {
 
@@ -27,7 +27,7 @@ public class newsAPITest {
     //path parameter always followed by : and it is used to get a single source among all response
 
 
-    @DisplayName("News api get all author if the source is is not null")
+    @DisplayName("News api get all author if the source is not null")
     @Test
     public void testNews(){
 
@@ -37,9 +37,11 @@ public class newsAPITest {
 
         //?country=us
         given().
+
                 header("Authorization", "Bearer "+apiKey).
                 queryParam("country", "us").
                 log().all().
+
         get("/top-headlines");
 
         JsonPath jsonPath = response.jsonPath();
@@ -62,14 +64,18 @@ public class newsAPITest {
 
 
         int count =  allAuthors.size();
+
         int count2 = allAuthorsFiltered.size();
 
         System.out.println("count = " +count +", count2 = "+count2);
+
         Assertions.assertTrue(allAuthors.size() != allAuthorsFiltered.size());
 
 
 
     }
+
+
 
 
 }

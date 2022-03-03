@@ -12,6 +12,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 public class GOT_apiTest {
+
     /*
     Make a request to GOT all characters endpoint :
 GET https://api.got.show/api/book/characters
@@ -21,6 +22,7 @@ The response is top level json array so you will not need to provide json path
 The method will look like this getList(" findAll { condition here }.theFieldNameHere")
 Assert the list size is 76
      */
+
 
     @DisplayName("getting all members of House Stark")
     @Test
@@ -56,8 +58,6 @@ Assert the list size is 76
 
 
     }
-
-
 
 
 

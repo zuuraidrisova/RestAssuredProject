@@ -13,9 +13,11 @@ public class Locations {
     private String city;
     private String state_province;
 
+
     public  Locations(){
 
     }
+
 
     public Locations(int location_id, String street_address, String postal_code, String city, String state_province){
 

@@ -14,7 +14,7 @@ public class SpartanQueryParameters {
     @BeforeAll
     public static void setUp(){
 
-        RestAssured.baseURI = "http://35.153.51.63:8000" ;
+        RestAssured.baseURI = "http://54.236.150.168:8000" ;
         RestAssured.basePath = "/api" ;
 
     }
@@ -33,6 +33,7 @@ public class SpartanQueryParameters {
 
     }
 
+
     //making it more obvious
     @DisplayName("Testing /spartans/search Endpoint")
     @Test
@@ -46,9 +47,8 @@ public class SpartanQueryParameters {
                 get("spartans/search").
         then().
                 statusCode(is(200)).
-                body("numberOfElements", is(3)).
+                body("totalElement", equalTo(14)).
                 log().all();
-
 
     }
 

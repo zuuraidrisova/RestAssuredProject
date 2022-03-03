@@ -17,7 +17,8 @@ public class PostSpartanDataDrivenWIthCSV {
     @BeforeAll
     public static void setUp(){
 
-        RestAssured.baseURI = "http://35.153.51.63";
+        //http://54.236.150.168:8000
+        RestAssured.baseURI = "http://54.236.150.168";
         RestAssured.port = 8000;
         RestAssured.basePath = "/api";
 
@@ -54,4 +55,5 @@ public class PostSpartanDataDrivenWIthCSV {
 
         RestAssured.reset();
     }
+
 }

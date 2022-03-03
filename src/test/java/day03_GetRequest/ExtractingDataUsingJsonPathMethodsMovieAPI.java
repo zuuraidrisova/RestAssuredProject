@@ -9,22 +9,24 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.*;
 
-public class ExtractingDataUsingPathMethodsMovieAPI {
+public class ExtractingDataUsingJsonPathMethodsMovieAPI {
+
 
     @DisplayName("getting movie data")
     @Test
     public void test(){
 
         Response response =
+
                 given().
                         log().all().
                        // baseUri("http://www.omdbapi.com").
-                        queryParam("apikey","6acf8091").
+                        queryParam("apikey","26aa5b74").
                         queryParam("t", "Boss Baby").
                 when().
                         get("http://www.omdbapi.com");
 
-        //jsonPath takes no parameters and returns an object called JsonPath
+            //jsonPath takes no parameters and returns an object called JsonPath
 
         //JsonPath is a class  coming from restAssured
         // that has lots of methods to get the body data
@@ -37,13 +39,16 @@ public class ExtractingDataUsingPathMethodsMovieAPI {
         String title = jp.getString("Title");
         System.out.println("title = " + title);
 
+
         //get year as int
         int year = jp.getInt("Year");
         System.out.println("year = " + year);
 
+
         //get director as string
         String director = jp.getString("Director");
         System.out.println("director = " + director);
+
 
         //get the first rating source as string
         String ratingSRC = jp.getString("Ratings[0].Source");
@@ -69,12 +74,8 @@ public class ExtractingDataUsingPathMethodsMovieAPI {
         System.out.println("firstRatingMap = " + firstRatingMap);
 
 
+
     }
-
-
-
-
-
 
 
 }

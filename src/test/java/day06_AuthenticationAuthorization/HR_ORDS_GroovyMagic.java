@@ -14,12 +14,22 @@ import static io.restassured.RestAssured.*;
 public class HR_ORDS_GroovyMagic {
 
 
-    @BeforeAll
-    public static void setUp(){
+       /*
+        Here is the get request we need to make
+            http://54.236.150.168:1000/ords/hr/regions/1
+            baseURI = http://54.236.150.168
+            port = 1000
+            basePath = ords/hr
+            request :  GET  /departments/{department_id}
+       */
 
-        RestAssured.baseURI = "http://35.153.51.63";
-        RestAssured.port = 1000;
-        RestAssured.basePath = "ords/hr";
+    @BeforeAll
+    public static void setup(){
+
+        baseURI = "http://54.236.150.168";
+        port = 1000;
+        basePath = "ords/hr";
+
 
     }
 
@@ -34,9 +44,7 @@ public class HR_ORDS_GroovyMagic {
                                 get("/employees");
                                 //prettyPeek();
 
-
         JsonPath jsonPath =  response.jsonPath();
-
 
         List<Integer> listID = jsonPath.getList("items.employee_id");
 
@@ -72,6 +80,7 @@ public class HR_ORDS_GroovyMagic {
         //get all last_names from 10-15
 
         System.out.println("Last names from 10 to 15 index : "+
+
                 jsonPath.getList("items[10..15].last_name"));
 
         //get the employee last_name with employee id of 105
@@ -89,6 +98,7 @@ public class HR_ORDS_GroovyMagic {
         System.out.println("===========================================");
 
         // using above example : find the salary of employee with email value LDEHAAN
+
         int salary = jsonPath.getInt("items.find{ it.email == \"LDEHAAN\"}.salary");
 
         System.out.println("salary = " + salary);
@@ -109,7 +119,6 @@ public class HR_ORDS_GroovyMagic {
         List<String> phoneNumberOfDepartment90 = jsonPath.getList("items.findAll{it.department_id == 90}.phone_number");
 
         System.out.println("phoneNumberOfDepartment90 = " + phoneNumberOfDepartment90);
-
 
         System.out.println("===========================================");
 
@@ -135,9 +144,8 @@ public class HR_ORDS_GroovyMagic {
 
         System.out.println("minSalaryGuy = " + minSalaryGuy);
 
+
     }
-
-
 
 
 

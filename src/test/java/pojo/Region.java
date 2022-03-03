@@ -8,6 +8,7 @@ public class Region {
     private int  region_id;
     private String region_name;
 
+
     public int getRegion_id() {
         return region_id;
     }
@@ -32,6 +33,7 @@ public class Region {
                 ", region_name='" + region_name + '\'' +
                 '}';
     }
+
 
 
 }

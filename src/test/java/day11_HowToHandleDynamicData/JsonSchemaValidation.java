@@ -1,6 +1,7 @@
 package day11_HowToHandleDynamicData;
 
 import io.restassured.RestAssured;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -15,6 +16,7 @@ public class JsonSchemaValidation {
     //create a file called singleSpartanSchema.json
     //under src/test.resources
     //add the schema content below
+
     /*
     {
   "definitions": {},
@@ -69,7 +71,9 @@ public class JsonSchemaValidation {
     }
   }
 }
+
      */
+
 
     @BeforeAll
     public static void init(){
@@ -89,7 +93,7 @@ public class JsonSchemaValidation {
         given().
                 log().uri().
         when().
-                get("/spartans/{id}", 3).
+                get("/spartans/{id}", 3422).
                 prettyPeek().
         then().
                 body(matchesJsonSchemaInClasspath("singleSpartanSchema.json"));
@@ -97,5 +101,12 @@ public class JsonSchemaValidation {
 
     }
 
+
+    @AfterAll
+    public static void teardown(){
+
+        RestAssured.reset();
+
+    }
 
 }

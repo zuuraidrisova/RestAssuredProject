@@ -15,24 +15,27 @@ import static io.restassured.RestAssured.*;
 public class jsonToJavaPojo {
 
 
-    //json to java object
+    //json to java object ==de-serialization
+
     //store the result of get spartans/{id} into pojo object
+
     /*
+
     {
     "id": 253,
     "name": "Mariette",
     "gender": "Female",
     "phone": 8339519234
         }
+
      */
 
     //since our existing spartan object does not have id field, so we cant save id field
 
-
     @BeforeAll
     public static void setUp(){
 
-        baseURI = "http://54.160.106.84";
+        baseURI = "http://54.236.150.168";
         port = 8000;
         basePath = "/api";
 
@@ -47,8 +50,6 @@ public class jsonToJavaPojo {
         Response response =
 
         given().
-                log().all().
-                auth().basic("admin","admin").
                 pathParam("id", newID).
         when().
                 get("/spartans/{id}").
@@ -84,19 +85,20 @@ public class jsonToJavaPojo {
     }
 
 
+
+
     @DisplayName("search request and save 1st result as Spartan2 pojo")
     @Test
     public void gettingNestedJsonAsPojo(){
 
+
         Response response =
 
-        given().
-                log().all().
-                auth().basic("admin", "admin").
-                queryParam("gender","Male").
-        when().
-                get("/spartans/search");
-                //prettyPeek();
+                given().
+                        queryParam("gender","Male").
+                when().
+                        get("/spartans/search");
+        //prettyPeek();
 
 
         System.out.println("response.statusCode() = " + response.statusCode());
@@ -109,7 +111,7 @@ public class jsonToJavaPojo {
         System.out.println("first guy name = " + jp.getString("content[0].name"));
 
         //lets save the entire first json object in the array into Spartan2 pojo
-       Spartan2 spartan2 =  jp.getObject("content[0]", Spartan2.class);
+        Spartan2 spartan2 =  jp.getObject("content[0]", Spartan2.class);
 
         System.out.println("spartan2 = " + spartan2);
 
@@ -118,21 +120,26 @@ public class jsonToJavaPojo {
         System.out.println("spartan2.getPhone() = " + spartan2.getPhone());
 
 
+
     }
+
+
+
 
     //how can i store the entire jsonArray into the List<Spartan2> ?
 
     @DisplayName("Save the json array as list<Spartan2>")
     @Test
-    public void testJsonArrayToListOfPojo(){
+    public void testJsonToListOfPojo() {
+
 
         Response response =
 
                 given().
                         queryParam("gender", "Female").
-                        auth().basic("admin", "admin").
                 when().
                         get("/spartans/search");
+
 
         //store all id as list of Integers
 
@@ -141,6 +148,8 @@ public class jsonToJavaPojo {
         List<Integer> ids = jsonPath.getList("content.id");
 
         System.out.println("ids = " + ids);
+
+
 
         //store all names as list of String
 
@@ -151,31 +160,32 @@ public class jsonToJavaPojo {
         System.out.println("names = " + names);
 
 
-        //storing the entire jsonArray as list of Spartan2
+
+
+        //storing the entire json as list of Spartan2
 
         List<Spartan2> entireJsonArray = jsonPath.getList("content");
 
         System.out.println("entireJsonArray = " + entireJsonArray);
 
 
-        //or we can store the entire jsonArray as list of Spartan2 this way
+
+        //or we can store the entire json as list of Spartan2 this way
 
         List<Spartan2> spartan2List = jsonPath.getList("content", Spartan2.class);
 
         System.out.println("spartan2List = " + spartan2List);
 
-        for(Spartan2 each : spartan2List){
+        for (Spartan2 each : spartan2List) {
 
             System.out.println(each);
         }
 
         // this is optional lambda way of for each
-        spartan2List.forEach( each -> System.out.println(each));
+        spartan2List.forEach(each -> System.out.println(each));
 
 
     }
-
-
 
 
 

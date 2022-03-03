@@ -11,6 +11,7 @@ public class Users {
         public Users(){
 
         }
+
         public Users(String id, String name){
 
            this.id = id;
@@ -41,5 +42,6 @@ public class Users {
                         ", name='" + name + '\'' +
                         '}';
         }
+
 
 }

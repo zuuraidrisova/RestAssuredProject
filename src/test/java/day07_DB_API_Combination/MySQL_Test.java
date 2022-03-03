@@ -14,7 +14,7 @@ public class MySQL_Test {
     //DB_Utility class has createConnection method and it accepts env as string and add
     //.database at the end to find correct credentials
     // ex: if we add library1, it will pick up below prmtrs:
-    // library1.database.url , library1.database.username, library1.database.password
+    // library1.database.url , library1.database.username,  library1.database.password
 
 
     @BeforeAll
@@ -29,6 +29,7 @@ public class MySQL_Test {
     public void testDB_Utility(){
 
         DB_Utility.runQuery("select * from books");
+
         DB_Utility.displayAllData();
 
 
@@ -39,9 +40,8 @@ public class MySQL_Test {
     public static void tearDown(){
 
         DB_Utility.destroy();
+
     }
-
-
 
 
 

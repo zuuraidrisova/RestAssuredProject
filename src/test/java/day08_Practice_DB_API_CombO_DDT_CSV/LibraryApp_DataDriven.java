@@ -12,6 +12,7 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
 public class LibraryApp_DataDriven {
+
     /*
     --- Create a csv file under resources folder called credentials.csv
     -- it has 2 column , username , password
@@ -25,9 +26,9 @@ public class LibraryApp_DataDriven {
     @BeforeAll
     public static void setUp(){
 
-        RestAssured.baseURI = ConfigurationReader.getProperty("library1.base_url");
-        //RestAssured.baseURI = ConfigurationReader.getProperty("library1.base_path");
+        RestAssured.baseURI = ConfigurationReader.getProperty("library2.base_url");
         RestAssured.basePath ="/rest/v1";
+
     }
 
     //give a name to ur test in this format
@@ -36,7 +37,6 @@ public class LibraryApp_DataDriven {
     @ParameterizedTest(name = "iteration {index} | username : {0}, password : {1}")
     @CsvFileSource(resources = "/credentials.csv", numLinesToSkip = 1)
     public void testLoginCredentials(String username, String password){
-
 
         //this is just for reading csv file
         System.out.println("Username and password : "+username +" ==>  "+password);
@@ -47,18 +47,15 @@ public class LibraryApp_DataDriven {
         //check if status code is 200 if password is correct
         //check the token field from response is not null
 
-
         given().
                 contentType(ContentType.URLENC).
                 formParam("email", username).
                 formParam("password", password).
         when().
                 post("/login").
-
         then().
                 statusCode(is(200)).
                 body("token", is(notNullValue()));
-
 
     }
 

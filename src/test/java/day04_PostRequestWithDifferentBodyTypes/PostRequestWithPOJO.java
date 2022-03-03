@@ -14,7 +14,7 @@ public class PostRequestWithPOJO {
     @BeforeAll
     public static void setUp(){
 
-        RestAssured.baseURI  = "http://35.153.51.63";
+        RestAssured.baseURI  = "http://54.236.150.168";
         RestAssured.port = 8000;
         RestAssured.basePath = "/api";
 

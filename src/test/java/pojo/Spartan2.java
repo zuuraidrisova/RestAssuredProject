@@ -14,6 +14,7 @@ public class Spartan2 {
 
     //this pojo is for retrieving data, for get request
 
+
     private  int id;
     private  String name;
     private  String gender;
@@ -23,6 +24,7 @@ public class Spartan2 {
 
         //does not do anything but required  for jackson to work
        //default constructor with no arguments
+
     }
 
     public Spartan2(int id, String name, String gender, long phone){
@@ -68,6 +70,7 @@ public class Spartan2 {
     public void setPhone(long phone) {
         this.phone = phone;
     }
+
 
     @Override
     public String toString(){

@@ -23,7 +23,6 @@ public class SampleTest {
         assertEquals(9, 6+3, "Hey, wrong result!");
 
 
-
     }
 
     //u can add the display name for ur test instead of method name

@@ -41,7 +41,9 @@ public class WhatIsVarArgs {
         }
 
         System.out.println("sum = " + sum);
+
     }
+
 
     @Test
     public void testAdd(){
@@ -51,6 +53,7 @@ public class WhatIsVarArgs {
         addAllNumbersVarArgs(1,2,3,4,5,6);
 
     }
+
 
 
 }

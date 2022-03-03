@@ -19,14 +19,14 @@ public class PostRequestWithFormAsBody {
         //posting in library app
         // body is not json , it's x-www-urlencoded-form-data
 
-        //http://library1.cybertekschool.com/rest/v1/login
-        // baseURI  is http://library1.cybertekschool.com
+        //https://library2.cybertekschool.com/rest/v1
+        // baseURI  is https://library2.cybertekschool.com
         // basePath is /rest/v1
         // we are working on POST /login
 
         // Post body , type x-www-urlencoded-form-data
-        //email :    librarian69@library
-        //password : KNPXrm3S
+        //email :    librarian123455@library
+        //password : QoyNEHxI
 
         // in URLs if you do not see port , because it's omitted because it's so common
         //  http --->> 80
@@ -34,7 +34,7 @@ public class PostRequestWithFormAsBody {
         //  anything other than above 2 ports need to be explicitly set in the URL
         // for example spartan app use port 8000 -->> yourip:8000
 
-        baseURI = "http://library1.cybertekschool.com";
+        baseURI = "https://library2.cybertekschool.com";
         basePath = "/rest/v1";
 
 
@@ -47,8 +47,8 @@ public class PostRequestWithFormAsBody {
 
         given().
                 log().all().
-                formParam("email", "librarian69@library").
-                formParam("password", "KNPXrm3S").
+                formParam("email", "librarian123455@library").
+                formParam("password", "QoyNEHxI").
         when().
                 post("/login").
         then().
@@ -70,7 +70,9 @@ public class PostRequestWithFormAsBody {
      */
     public static String loginAndGetToken(String username, String password){
 
-        Response jsonResponse  = given().
+        Response jsonResponse  =
+
+        given().
                 contentType(ContentType.URLENC).
                 formParam("email", username ).
                 formParam("password", password).
@@ -82,6 +84,7 @@ public class PostRequestWithFormAsBody {
         String token = jsonPath.getString("token");
 
         return  token;
+
     }
 
 
@@ -89,9 +92,10 @@ public class PostRequestWithFormAsBody {
     @Test
     public void runningUtilityMethod(){
 
-       String token =  loginAndGetToken("librarian69@library", "KNPXrm3S");
+       String token =  loginAndGetToken("librarian123455@library", "QoyNEHxI");
 
         System.out.println("token = " + token);
+
 
     }
 

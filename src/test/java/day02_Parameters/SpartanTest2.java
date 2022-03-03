@@ -14,9 +14,9 @@ public class SpartanTest2 {
     @BeforeAll
     public static void setUp(){
 
-        //http://35.153.51.63:8000
+        //http://54.236.150.168:8000
         //how to set base URL , port , base path so i can reuse them
-        RestAssured.baseURI = "http://35.153.51.63:8000";
+        RestAssured.baseURI = "http://54.236.150.168:8000";
         RestAssured.basePath = "/api";
 
         //it will create the request URL as is
@@ -33,7 +33,7 @@ public class SpartanTest2 {
         given().
                 log().uri().
         when().
-                get("/spartans/197").
+                get("/spartans/989").
               //  prettyPeek().
         then().
                 log().ifValidationFails().
@@ -47,7 +47,7 @@ public class SpartanTest2 {
     @Test
     public void getAllSpartanS(){
 
-        //String url = "http://35.153.51.63:8000/api/spartans";
+        //String url = "http://54.236.150.168:8000/api/spartans";
 
         given().
                 header("Accept", "application/json;charset=UTF-8").
@@ -90,6 +90,7 @@ public class SpartanTest2 {
     @DisplayName("testing hello again")
     @Test
     public void testingHello(){
+
 
         given().
                 accept(ContentType.TEXT). //specifying that you want to get a text result back

@@ -17,6 +17,7 @@ public class OpenMovieDB_XMLPath {
     @Test
     public void testGettingAttributeAsList(){
 
+
         Response response =
 
         given().
@@ -35,7 +36,6 @@ public class OpenMovieDB_XMLPath {
 
 
     }
-
 
 
 }

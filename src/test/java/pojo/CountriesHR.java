@@ -15,3 +15,4 @@ public class CountriesHR {
     private int region_id;
 
 }
+

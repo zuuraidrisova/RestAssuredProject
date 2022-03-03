@@ -19,26 +19,26 @@ public class hr_ords_departmentsPojoTest {
     public static void setUp(){
         /*
           Here is the get request we need to make
-              http://35.153.51.63:1000/ords/hr/regions/1
-              baseURI = http://35.153.51.63
+              http://54.236.150.168:1000/ords/hr/regions/1
+              baseURI = http://54.236.150.168
               port = 1000
               basePath = ords/hr
               request :  GET /regions/{region_id}
          */
-        RestAssured.baseURI = "http://35.153.51.63";
+        RestAssured.baseURI = "http://54.236.150.168";
         RestAssured.port = 1000;
         RestAssured.basePath = "ords/hr";
+
 
     }
 
 
-    //Serialization : pojo to json  and
+    //Serialization : pojo to json
     //De-Serialization : json to pojo
 
     @DisplayName("testing the /departments/{department_id} endpoints")
     @Test
     public void testDepartments(){
-
 
         Response  response =
 
@@ -53,6 +53,7 @@ public class hr_ords_departmentsPojoTest {
         Departments departments = response.as(Departments.class);
 
         System.out.println("departments = " + departments);
+
 
     }
 
@@ -88,6 +89,7 @@ public class hr_ords_departmentsPojoTest {
         }
 
 
+
     }
 
 
@@ -119,6 +121,7 @@ public class hr_ords_departmentsPojoTest {
         //System.out.println("last manager_id from response json = " + jsonPath.getInt("items[-1].manager_id"));
         //this is giving runtime exception because manager_id is null, not an int
 
+
         // get the list of department name from the response and save it to List<String>
          List<String> listDepartmentNames = jsonPath.getList("items.department_name");
 
@@ -127,6 +130,7 @@ public class hr_ords_departmentsPojoTest {
              System.out.println(listDepartmentNames.get(i));
          }
 
+
         // get a List<Departments> from the response json
         List<Departments> departmentsList = jsonPath.getList("items");
 
@@ -134,7 +138,6 @@ public class hr_ords_departmentsPojoTest {
 
 
     }
-
 
 
 

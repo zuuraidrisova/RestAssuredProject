@@ -20,13 +20,19 @@ public class GettingTestDataFromSpartanDB {
     @BeforeAll
     public static void init(){
 
-       //RestAssured.baseURI = "http://35.153.51.63/";
+       //RestAssured.baseURI = "http://54.236.150.168";
        //RestAssured.port = 8000;
         baseURI = ConfigurationReader.getProperty("spartan1.base_url");
         RestAssured.basePath = "/api";
 
+        DB_Utility.createConnection(
 
-        DB_Utility.createConnection(ConfigurationReader.getProperty("active_env"));
+                ConfigurationReader.getProperty("spartan1.database.url"),
+                ConfigurationReader.getProperty("spartan1.database.username"),
+                ConfigurationReader.getProperty("spartan1.database.password")
+
+        );
+
 
     }
 
@@ -87,6 +93,7 @@ public class GettingTestDataFromSpartanDB {
         // now we will try it out.
 
             //  .body("phone.toLong()", is(phoneFromDB) ) ;
+
     }
 
 
@@ -115,11 +122,14 @@ public class GettingTestDataFromSpartanDB {
 
     }
 
+
     @AfterAll
     public static void tearDown(){
 
         RestAssured.reset();
         DB_Utility.destroy();
+
     }
+
 
 }

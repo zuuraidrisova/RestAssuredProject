@@ -25,6 +25,7 @@ public class HamcrestPractice {
         int num1 = 5;
         int num2 = 4;
 
+
         //we need these two imports to make this work
                 //import static org.hamcrest.MatcherAssert.assertThat;
                 //import static org.hamcrest.Matchers.*;
@@ -52,6 +53,8 @@ public class HamcrestPractice {
         assertThat(num1 + num2, is( not(11)));
 
         assertThat(num1 + num2, not( equalTo( 11)));
+
+
 
         //save ur first name and last name into 2 variables
         //test the concatenation result using hamcrest matcher
@@ -97,6 +100,7 @@ public class HamcrestPractice {
     @DisplayName("Support for collections")
     @Test
     public void test2(){
+
 
         List<Integer> numlist = Arrays.asList(11,45,64,44,39,55);
 

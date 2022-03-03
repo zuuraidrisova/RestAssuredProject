@@ -44,7 +44,7 @@ public class SpartanRolePostRequestWithRequestSpecResponseSpec {
         //we are using Akbar's ip address because it is with basic auth,
         // and my ip is with no auth, so i will not be able to complete the test with my own
 
-        RestAssured.baseURI = "http://54.160.106.84";
+        RestAssured.baseURI = "http://54.236.150.168";
         RestAssured.port = 8000;
         RestAssured.basePath = "/api";
 
@@ -52,8 +52,6 @@ public class SpartanRolePostRequestWithRequestSpecResponseSpec {
         Spartan spartan = SpartanAPI_Utility.createRandomSpartanObject();
 
         validPostRequestSpec = given().
-
-                auth().basic("admin", "admin").
                 accept(ContentType.JSON). //to tell server what type of file u want  back
                 contentType(ContentType.JSON).//to tell server what type of file u r sending
                 body(spartan).
@@ -75,6 +73,7 @@ public class SpartanRolePostRequestWithRequestSpecResponseSpec {
 
     }
 
+
     @DisplayName("Extracting the requestSpec and responseSpec practice")
     @Test
     public void test(){
@@ -89,5 +88,8 @@ public class SpartanRolePostRequestWithRequestSpecResponseSpec {
 
 
     }
+
+
+
 
 }

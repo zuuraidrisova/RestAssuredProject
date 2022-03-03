@@ -36,7 +36,7 @@ and response spec to re-use in your tests everywhere and it will make
         //we are using Akbar's ip address because it is with basic auth,
         // and my ip is with no auth, so i will not be able to complete the test with my own
 
-        RestAssured.baseURI = "http://54.160.106.84";
+        RestAssured.baseURI = "http://54.236.150.168";
         RestAssured.port = 8000;
         RestAssured.basePath = "/api";
 
@@ -64,7 +64,7 @@ and response spec to re-use in your tests everywhere and it will make
         given().
                 spec(requestSpec).
         when().
-                delete("/spartans/{id}",10).
+                delete("/spartans/{id}",3817).
         then().
                 spec(responseSpec);
 
@@ -81,7 +81,7 @@ and response spec to re-use in your tests everywhere and it will make
                 contentType(ContentType.JSON).
                 body(spartan).
         when().
-                put("/spartans/{id}", 10).
+                put("/spartans/{id}", 3817).
         then().
                 spec(responseSpec);
 
@@ -111,5 +111,6 @@ and response spec to re-use in your tests everywhere and it will make
 
         RestAssured.reset();
     }
+
 
 }

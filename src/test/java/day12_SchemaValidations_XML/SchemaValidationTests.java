@@ -25,6 +25,7 @@ GET /spartans/search
 Validate the response against the schema in classpath
      */
 
+
     @BeforeAll
     public static void setUp(){
 
@@ -97,10 +98,13 @@ Validate the response against the schema in classpath
 
     }
 
+
+
     @AfterAll
     public static void tearDown(){
 
         RestAssured.reset();
     }
+
 
 }

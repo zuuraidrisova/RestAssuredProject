@@ -25,10 +25,12 @@ public class SpartanRoleBasedAccessControlNegativeTest_Reuse {
         //we are using Akbar's ip address because it is with basic auth,
         // and my ip is with no auth, so i will not be able to complete the test with my own
 
-        RestAssured.baseURI = "http://54.160.106.84";
+        RestAssured.baseURI = "http://54.236.150.168";
         RestAssured.port = 8000;
         RestAssured.basePath = "/api";
+
     }
+
 
     @DisplayName("User should not be able to delete data")
     @Test
@@ -61,12 +63,14 @@ public class SpartanRoleBasedAccessControlNegativeTest_Reuse {
         given().
                 spec(requestSpec).
         when().
-                delete("/spartans/{id}",10).
+                delete("/spartans/{id}",995).
         then().
               spec(responseSpec);
 
 
     }
+
+
 
     @AfterAll
     public static void tearDown(){

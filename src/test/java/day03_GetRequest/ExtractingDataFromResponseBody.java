@@ -15,16 +15,17 @@ public class ExtractingDataFromResponseBody {
 
         // provide your baseURI in the test
         // add query parameters
-        // apikey 6acf8091 here
+        // apikey 26aa5b74 here
         // t = Boss Baby
         // Save the response into response object
 
 
         Response response =
+
             given().
                     log().all().
                     baseUri("http://www.omdbapi.com").
-                    queryParam("apikey","6acf8091").
+                    queryParam("apikey","26aa5b74").
                     queryParam("t","Boss Baby").
             when().
                     get();
@@ -40,6 +41,7 @@ public class ExtractingDataFromResponseBody {
         int expectedStatusCode = 200;
 
         Assertions.assertTrue(expectedStatusCode == actualStatusCode);
+
 
 
         String actualTitle = response.path("Title");
@@ -82,6 +84,7 @@ public class ExtractingDataFromResponseBody {
         System.out.println("actors = " + actors);
 
         Assertions.assertTrue(actors.contains(expectedInActor));
+
 
 
 

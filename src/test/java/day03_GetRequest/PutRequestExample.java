@@ -30,7 +30,6 @@ public class PutRequestExample {
 
         //282
 
-
         String myBodyData = " {\n" +
                 "            \"name\": \"Asko\",\n" +
                 "            \"gender\": \"Male\",\n" +
@@ -43,19 +42,13 @@ public class PutRequestExample {
             contentType(ContentType.JSON).
             body(myBodyData).
       when().
-              put("/spartans/{id}", 282).
+              put("/spartans/{id}", 3661).
       then().
               log().all().
               statusCode(is(204));
 
 
-
     }
-
-
-
-
-
 
 
 

@@ -10,6 +10,7 @@ public class Spartan {
     private  String gender;
     private long phone;
 
+
     public Spartan(){
 
     }
@@ -21,6 +22,7 @@ public class Spartan {
         this.phone = phone;
 
     }
+
 
     public String getName() {
         return name;
@@ -45,6 +47,7 @@ public class Spartan {
     public void setPhone(long phone) {
         this.phone = phone;
     }
+
 
     @Override
     public String toString() {

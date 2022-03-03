@@ -14,11 +14,13 @@ public class HamcrestMatcherEveryItem {
     @Test
     public void testList(){
 
+
         List<Integer> nums = Arrays.asList(11,5,3,4,6,8,9);
 
         assertThat(nums, everyItem(greaterThan(2)));
 
         assertThat(nums, everyItem(lessThan(20)));
+
 
         //assertThat(nums, allOf(greaterThan(0), lessThan(20)));
 
@@ -44,5 +46,6 @@ public class HamcrestMatcherEveryItem {
         assertThat(num1, allOf(greaterThan(0), lessThan(50)));
 
     }
+
 
 }

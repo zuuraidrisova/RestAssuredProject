@@ -24,7 +24,7 @@ public class getOneSpartanMethod {
         dataMap.put("gender", gender);
         dataMap.put("phone", phone);
 
-        RestAssured.baseURI = "http://35.153.51.63";
+        RestAssured.baseURI = "http://54.236.150.168";
         RestAssured.port = 8000;
         RestAssured.basePath = "/api";
 
@@ -38,7 +38,10 @@ public class getOneSpartanMethod {
 
         JsonPath jsonPath = responseJson.jsonPath();
 
-        return  jsonPath.getInt("id");
+        return  jsonPath.getInt("data.id");
+
 
     }
+
+
 }

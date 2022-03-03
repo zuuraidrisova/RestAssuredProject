@@ -19,17 +19,17 @@ public class hr_ords_locationsPojoTest {
 
         /*
           Here is the get request we need to make
-              http://35.153.51.63:1000/ords/hr/regions/1
-              baseURI = http://35.153.51.63
+              http://54.236.150.168:1000/ords/hr/regions/1
+              baseURI = http://54.236.150.168
               port = 1000
               basePath = ords/hr
-              request :  GET /regions/{region_id}
+              request :  GET /locations/{location_id}
          */
 
     @BeforeAll
     public static void setUp(){
 
-        baseURI = "http://35.153.51.63";
+        baseURI = "http://54.236.150.168";
         RestAssured.port = 1000;
         RestAssured.basePath = "ords/hr";
 
@@ -85,6 +85,7 @@ public class hr_ords_locationsPojoTest {
        // import static org.hamcrest.MatcherAssert.*;
         //import static org.hamcrest.Matchers.hasSize;
         assertThat(locationsList, hasSize(23));
+
 
     }
 
@@ -157,11 +158,7 @@ public class hr_ords_locationsPojoTest {
 
 
 
-
     }
-
-
-
 
 
 }
